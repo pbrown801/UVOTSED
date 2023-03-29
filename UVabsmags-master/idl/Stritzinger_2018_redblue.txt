@@ -1,0 +1,17 @@
+#SN	Host	Redshift	E(B - V)_MW	E(B - V)_host	t_first	t_rise	Deltam_15(B)	M_B	Spectral Type^a	Color	References(s)	
+#			(mag)	(mag)	(MJD)	(days)	(mag)	(mag)				
+SN2009ig	NGC1015	0.00877	0.032	cdots	cdots	cdots	55062.9	17.1	0.90 +or- 0.07	-19.46 +or- 0.12	CN,HV	red	(1)	
+SN2011fe	M101	0.00080	0.008	cdots	cdots	cdots	55796.7	17.8	1.07 +or- 0.06	-19.10 +or- 0.19	CN,normal	red	(2)	
+SN2012cg	NGC4424	0.00146	0.018	0.18 +or- 0.05	56061.8	19.5	0.86 +or- 0.02	-19.62 +or- 0.31	SS,91T/99aa-like	blue	(3)	
+SN2012fr	NGC1365	0.00546	0.018	0.03 +or- 0.04	56225.8	16.9	0.82 +or- 0.03	-19.43 +or- 0.14	CN+SS,HV	red	(4)	
+SN2012ht	NGC3447	0.00356	0.025	0.05 +or- 0.01	56278.0	17.6	1.27 +or- 0.05	-18.98 +or- 0.07	CN,normal	red	(5)	
+SN2013dy	NGC7250	0.00389	0.140	0.21 +or- 0.01	56483.4	17.7	0.92 +or- 0.03	-19.65 +or- 0.04	SS,91T/99aa-like	blue	(6)	
+SN2013gy	NGC1418	0.01402	0.049	0.11 +or- 0.06	56629.4	19.1	1.23 +or- 0.06	-19.32 +or- 0.16	CN,normal	red	(7)	
+iPTF13ebh	NGC890	0.01327	0.067	0.07 +or- 0.02	56607.9	14.8	1.76 +or- 0.02	-18.95 +or- 0.19	CL,normal	red	(8)	
+ASASSN-14lp	NGC4666	0.00510	0.021	0.35 +or- 0.01	56998.5	16.7	0.80 +or- 0.05	-19.36 +or- 0.60	SS,91T-like	blue	(9)	
+SN2015F	NGC2442	0.00489	0.175	0.16 +or- 0.03	57088.4	18.5	1.25 +or- 0.05	-19.47 +or- 0.27	CN,normal	red	(10)	
+SN2016bln	NGC5221	0.02328	0.028	0.05 +or- 0.03	57481.6	17.9	0.85 +or- 0.05	-19.20 +or- 0.40	SS,normal/91T-like	blue	(11)	
+#MUSSES1604D	cdots	0.11737	0.026	cdots	cdots	cdots	57481.8	22.4	1.00 +or- 0.07	-18.80 +or- 0.40	BL,HV	red	(12)	
+SN2017cbv NGC5643 	0.00400	0.150	cdots	cdots	cdots	57821.9	18.3	1.06 +or- 0.05	-20.04 +or- 0.60	SS,91T-like	blue	(13)
+# readcol, 'Stritzinger_2018_redblue.txt', SN, Host, Redshift, EBV_MW, EBV_host, t_first, t_rise, DeltamB15, pm, dmerr, M_B, pm2, mberr, SpectralType, Color, References, format='(A, A, F, F, A, F, F, F, F, F, A, F, F, A, F, A, A, A, A)'
+# readcol, 'Stritzinger_2018_redblue.txt', SN, Host, Redshift, EBV_MW, EBV_host, pm3, ebvhosterr, t_first, t_rise, DeltamB15, pm, dmerr, M_B, pm2, mberr, Spectralcode, SpectralType, Color, References, format='(A, A, A, A, A,A,A,A,A,A, A, A, A, A, A, A, A, A, A)', comment='#'

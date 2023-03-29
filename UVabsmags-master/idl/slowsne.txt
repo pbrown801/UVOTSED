@@ -1,0 +1,57 @@
+
+SN2009dc     0.743916 sparsebadfits
+SN2012G     0.682136  latebutgood
+SN2011de     0.782501 good
+SN2011aa     0.652823 good
+LSQ13crf     0.782989 noUV
+SN2014ao     0.773798 noUV
+SN2014eg     0.677305 badvfit
+ASASSN-15pz     0.764965 good
+SN2016ccj     0.623442 good
+
+ASASSN-15rq     0.842068 good
+iPTF14bdn     0.810072 good
+SN2007S     0.833437 okay
+
+
+SN2017cbv     0.965797 good
+SN2016fej     0.870927 good
+SN2016bln     0.888028 good
+SN2016aqt     0.888412 fewuv
+ASASSN-14lp     0.911620 good
+iPTF13dge     0.992453 badvfit
+SN2013eh     0.900177 okay
+SN2013dy     0.901549 good
+SN2013aa     0.963466 good
+LSQ12gdj     0.875627 b has some bad points
+SN2012fr     0.856708 great
+SN2012bl     0.902870 good
+SN2010ih     0.956831 badfits
+PTF10icb     0.944477 prettygood
+SN2009jr     0.904691 onlypeakinw1
+SN2009ig     0.852476 good
+
+;;;;;;  slowest peaksneia
+
+SN2016ccj     0.623442     0.331522     0.749321
+SN2011aa     0.652823     0.382791     0.885527
+SN2014eg     0.677305      1.37008          NaN
+SN2011de     0.782501         -NaN         -NaN
+iPTF14bdn     0.810072      1.41733      2.36835
+SN2007S     0.833437      1.92301          NaN
+ASASSN-15rq     0.842068     0.665254      1.65917
+
+;;;;;  slowest allsneia
+
+SN2016ccj     0.623442     0.331522     0.749321  SC
+SN2011aa     0.652823     0.382791     0.885527  
+SN2014eg     0.677305      1.37008          NaN  91T red
+SN2012G     0.682136      1.63771          NaN   broadHV red
+SN2009dc     0.743916         -NaN         -NaN   SC
+ASASSN-15pz     0.764965     0.408243      1.05217   SC
+SN2014ao     0.773798          NaN          NaN  HV reddened, only ubv
+SN2011de     0.782501         -NaN         -NaN HV
+LSQ13crf     0.782989          NaN          NaN only ubv
+iPTF14bdn     0.810072      1.41733      2.36835 99aa
+SN2007S     0.833437      1.92301          NaN  91T
+ASASSN-15rq     0.842068     0.665254      1.65917 HV
