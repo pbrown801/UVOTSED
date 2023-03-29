@@ -1,0 +1,122 @@
+
+
+Xiaomeng,
+
+It was easier to write equations in latex, so I started writing out the equations and describing the method (as I see it right now) in this overleaf document
+
+https://www.overleaf.com/9245434817qkpjqxwkyjtg
+We could either use SN2011fe as the baseline template or this version from Ryan Foley with a variation for differences in delta MB15
+
+https://academic.oup.com/mnras/article/461/2/1308/2608545
+
+
+astropy contains a lot of routines including reddening.  If you do this project in python I will be able to help more and it will have wider usefulness.
+
+The overleaf document outlines the different parameters I see us using.  You could start with the Delta M 15 and reddening parts and I'll work on the other parts next week.
+
+Peter
+
+
+Just to document our discussion from a week and a half ago.  We discussed spectral warping to match spectra to photometric observations.  This is typically done in the optical with a spline fit to a ratio between the spectrophotometric flux and the photometric flux.  This might work for correcting the CSP spectra to the CSP photometry.  For a project looking for spectral parameters to improve cosmology like in the SNF SNEMO paper we talked about the week before (http://adsabs.harvard.edu/abs/2018arXiv181009476S), Jianhua suggested the warping should be done within the model rather than the astronomers just delivering to them corrected spectra.  We should come back to this.
+
+For my UV work, deriving the flux from the photometry is already dependent on having a good spectral model, and applying a spline correction might adversely affect the steep drop off from the optical to UV, leading to incorrect k-corrections.  So what we need is a decent model (or models) for the UV spectrum.  Jianhua, Xiaomeng, and I discussed using the existing sample to train a model, but the existing set is too sparse.  So we (Xiaomeng and I) are going to use reddening laws and some of the existing spectra (2011by, 2017erp) to create spectral functions to apply to a SN2011fe spectral template. 
+https://www.overleaf.com/9245434817qkpjqxwkyjtg
+We'll see how well they match the color distribution we observe and use the sample of spectra which are photometrically consistent with a given object to determine things like k-corrections and reddening coefficients and their uncertainty.  I will be advising on the astrophysical inputs, but Xiaomeng will be building the model and all of the real work.
+
+Peter
+
+
+Xiaomeng,
+
+So here is a spectrophotometric series of SN2011fe that we can take as a template.  For what I was discussing we can focus on maximum light.  The closest to maximum light is the file M000027.dat
+
+They come from this paper.  https://www.aanda.org/articles/aa/full_html/2013/06/aa21008-12/aa21008-12.html
+
+Here is a github site my undergrads were working on with some useful codes and filter transmission curves.  You might clone it or just pull the pieces you find useful.
+https://github.com/EthanVieira/Aggienova
+vegaspecphot.py is the photometry code.  Basically a magnitude is 
+-2.5 log10 (counts/Vegacounts)
+where counts is the integral of (the filter curve multiplied by the spectrum) and Vegacounts is the integral of (the filter curve multiplied by a Vega spectrum)   () added for clarity.
+
+
+On Tuesday, November 20, 2018, 3:50:56 PM CST, Yan, Xiaomeng <xiaomengyan@stat.tamu.edu> wrote:
+
+
+Hello Peter,
+
+
+
+I am working on this project now but  I can't not open the link https://github.com/EthanVieira/Aggienova. I guess this is related with something like  public/private issue.  I would be better for me to start from the beginning, so I downloaded the transmission curve data from website: 
+
+
+
+http://svo2.cab.inta-csic.es/svo/theory/fps3/index.php?id=Swift/UVOT.V&&mode=browse&gname=Swift&gname2=UVOT#filter
+
+
+
+and I will apply the modulus pyphot and calculate the photometric data. 
+
+
+
+Based on the shared overleaf document, can I say that for any spectrum at phase t, it  can be expressed by the corrected template, say SN2011fe, at the same phase t. 
+
+
+
+In this case,  I don't think linear expansion model is interpretable. And the problem now is that we don't know t, DeltaM15, a, b, c, E(B-V), RV. So our problem becomes how to determine these seven parameters based on photometric (or color) data.   So our entire story can be formulated as:  
+
+Build a template (SN2011fe) surface (Gaussian process)
+Determine  t, DeltaM15, a, b, c, E(B-V), RV such that given spectrum "match" the reshaped surface at the some phase t, in terms of the photometric data we know. 
+
+Could you please help me to justify whether this new idea is more practical than the previous linear expansion one. Thank you. 
+
+
+Best,
+
+Xiaomeng Yan
+3rd Year Ph.D. Student,
+Department of Statistics,
+Texas A&M University,
+College Station, TX 77840, USA
+
+
+
+Sorry, I forgot that that github wasn't public yet.  Your route is more easily documented anyway.  
+
+For now we can forget the phase and just worry about maximum light.  
+
+We don't have a spectrum that we are trying to match by finding the best values for a, b, c, E(B-V), etc.  We have a set of colors and we are matching those to the colors of spectra built by using different values of a, b, c.  Maybe we build a surface and interpolate to get a better fit to a, b, and c, but first we are finding which is the best fit.  
+
+We could start with the 11fe template and variations on E(B-V) and Rv.
+
+Does this make sense?
+
+Peter
+
+
+
+Jianhua, Xiaomeng,
+
+So the paper describing the Hsiao template is here as well as the site with all of the library spectra which went into it (surprisingly well documented and accessible for being over a decade old).   The Hsiao templates are spectra over a long timebaseline, incorporating many supernovae with different values of DeltaM15(B) into an (weighted) average spectrum versus time.
+http://adsabs.harvard.edu/abs/2007ApJ...663.1187H
+http://www-supernova.lbl.gov/~hsiao/uber/
+
+Ryan Foley's UV template is just for maximum light but as a function of DeltaM15(B)
+http://adsabs.harvard.edu/abs/2016MNRAS.461.1308F
+The input spectra are not in one place, so I'll have to gather them together.
+
+The next generation template should be a function of wavelength, time, and DeltaM15(B) (at least).  I guess the SALTII spectral model has something like that (though I'm not sure how it was created) and the Supernova Factory SNEMO paper we talked about a few weeks ago derives many more parameters.
+
+Peter
+
+
+
+
+Here are the forms for the wavelength dependence of reddening, where the wavelength-dependence (shape) is parameterized by R_V and the normalization is set by E(B-V).  
+The most common are Cardelli, Clayton, & Mathis 1989 or Fitzpatrick & Massa 2007.  There are python implementations here:
+https://extinction.readthedocs.io/en/latest/
+
+Or you can just implement the equations given in :
+Equations 2 and 3 and Table 5 in FM07 http://adsabs.harvard.edu/abs/2007ApJ...663..320F
+or Equations 1-5 in CCM89 http://adsabs.harvard.edu/abs/1989ApJ...345..245C
+
+

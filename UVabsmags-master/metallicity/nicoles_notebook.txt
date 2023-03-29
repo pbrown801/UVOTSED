@@ -1,0 +1,504 @@
+
+
+def color_dm15b_poserr():
+    path='/Users/nicole/Documents/A_and_M_REU/SNe_FITS/Pan_et_al_data/metallicity_allcolumns.csv'
+    snnames,z,dm15,dm15err,phase,hostname,hostreddening,hostmorphology,hubbletype,logmass,logmassperr,logmassnerr,logOH,logOHperr,logOHnerr,AGNflag,f2535,f2535err,f3025,f3025err,bpeak_w2_mag,bpeak_m2_mag,bpeak_w1_mag,bpeak_uu_mag,bpeak_bb_mag,bpeak_vv_mag,bpeak_w2_magerr,bpeak_m2_magerr,bpeak_w1_magerr,bpeak_uu_magerr,bpeak_bb_magerr,bpeak_vv_magerr,mwreddening=Import_Data(path)
+    passband_dict={}
+    passband_dict['bpeak_w2_mag']=[float(i) for i in bpeak_w2_mag]
+    passband_dict['bpeak_m2_mag']=[float(i) for i in bpeak_m2_mag]
+    passband_dict['bpeak_w1_mag']=[float(i) for i in bpeak_w1_mag]
+    passband_dict['bpeak_uu_mag']=[float(i) for i in bpeak_uu_mag]
+    passband_dict['bpeak_bb_mag']=[float(i) for i in bpeak_bb_mag]
+    passband_dict['bpeak_vv_mag']=[float(i) for i in bpeak_vv_mag]
+    hostreddening=[float(i) for i in hostreddening]
+    mwreddening=[float(i) for i in mwreddening]
+    #list of extinction constant for filters w2,m2,w1,uu,bb,vv
+    constant=[6.2,8.01,5.43,4.92,4.16,3.16]
+    #extinction is bpeak_mag-hostreddening*filter_constant-mwreddening*filter_constant
+    passband=['w2','m2','w1','uu','bb','vv']
+    for j in range(len(passband)):
+        pas=passband[j]
+        passband_dict['bpeak_'+pas+'_mag_corr']=[]
+        obs_mag=passband_dict['bpeak_'+pas+'_mag']
+        for i in range(len(obs_mag)):
+            value=obs_mag[i]-hostreddening[i]*constant[j]-mwreddening[i]*constant[j]
+            passband_dict['bpeak_'+pas+'_mag_corr'].append(value)
+    #get color
+    ub_color=np.subtract(passband_dict['bpeak_uu_mag_corr'],passband_dict['bpeak_bb_mag_corr'])
+    w1b_color=np.subtract(passband_dict['bpeak_w1_mag_corr'],passband_dict['bpeak_bb_mag_corr'])
+    m2b_color=np.subtract(passband_dict['bpeak_m2_mag_corr'],passband_dict['bpeak_bb_mag_corr'])
+    
+    #get color errors
+    bpeak_uu_magerr=[float(i) for i in bpeak_uu_magerr]
+    bpeak_w1_magerr=[float(i) for i in bpeak_w1_magerr]
+    bpeak_m2_magerr=[float(i) for i in bpeak_m2_magerr]
+    bpeak_bb_magerr=[float(i) for i in bpeak_bb_magerr]
+    ub_color_err=[]
+    w1b_color_err=[]
+    m2b_color_err=[]
+    for i in range(len(bpeak_uu_magerr)):
+        ub_val=bpeak_uu_magerr[i]**2+bpeak_bb_magerr[i]**2
+        ub_color_err.append(ub_val)
+        w1b_val=bpeak_w1_magerr[i]**2+bpeak_bb_magerr[i]**2
+        w1b_color_err.append(w1b_val)
+        m2b_val=bpeak_m2_magerr[i]**2+bpeak_bb_magerr[i]**2
+        m2b_color_err.append(m2b_val)
+    
+    #get host mass
+    logmass=[float(i) for i in logmass]
+    logmassperr=[float(i) for i in logmassperr]
+    logmassnerr=[float(i) for i in logmassnerr]
+    
+    #get host metallicity
+    logOH=[float(i) for i in logOH]
+    logOHperr=[float(i) for i in logOHperr]
+    logOHnerr=[float(i) for i in logOHnerr]
+    
+    #plot
+    f, ((ax1,ax2),(ax3,ax4),(ax5,ax6)) = plt.subplots(3,2,sharex='col',sharey='row')
+
+    ax1.yaxis.set_ticks_position('both')
+    ax1.xaxis.set_ticks_position('both')
+    ax1.errorbar(logmass,ub_color,xerr=logmassperr,yerr=ub_color_err,ls='')
+    ax1.scatter(logmass,ub_color)
+    ax1.set_ylabel('u-b Color')
+    #filter out NAN values
+    x1=logmass
+    x1sig=logmassperr
+    y1=ub_color
+    y1sig=ub_color_err
+    x=[]
+    xsig=[]
+    y=[]
+    ysig=[]
+    for i in range(len(x1)):
+        if str(x1[i])!='nan':
+            if str(y1[i])!='nan':
+                if str(x1sig[i])!='nan':
+                    if str(y1sig[i])!='nan':
+                        x.append(x1[i])
+                        y.append(y1[i])
+                        xsig.append(x1sig[i])
+                        ysig.append(y1sig[i])
+    corr_coeff, p_value_pearson=stats.pearsonr(x,y)
+    tau, p_value_kendall=stats.kendalltau(x,y)
+    lm= linmix.LinMix(x, y, xsig, ysig, K=2)
+    lm.run_mcmc(silent=True)
+    for i in range(0, len(lm.chain), 25):
+        xs = np.arange(6,13)
+        ys = lm.chain[i]['alpha'] + xs * lm.chain[i]['beta']
+        ax1.plot(xs, ys, color='r', alpha=0.02)
+    intercept_array=[]
+    slope_array=[]
+    for i in range(0, len(lm.chain), 25):
+        intercept=lm.chain[i]['alpha']
+        slope=lm.chain[i]['beta']
+        intercept_array.append(intercept)
+        slope_array.append(slope)
+    mean_intercept=np.mean(intercept_array)
+    std_intercept=np.std(intercept_array)
+    mean_slope=np.mean(slope_array)
+    std_slope=np.std(slope_array)
+    x_mean=np.arange(6,13)
+    y_mean=mean_intercept+x_mean*mean_slope
+    ax1.plot(x_mean, y_mean, color='k')
+    #Record data
+    filename='MCMC_Regression_For_Color_vs_Mass_For_Poserr.txt'
+    text_file=open(filename,'a+')
+    color='u-b'
+    slope=str(np.round(mean_slope,3))
+    slope_err=str(np.round(std_slope,3))
+    intercept=str(np.round(mean_intercept,3))
+    intercept_err=str(np.round(std_intercept,3))
+    K_cor_coe=str(np.round(tau,3))
+    K_pval=str(np.round(p_value_kendall,3))
+    if float(K_pval)==0:
+        K_pval=str(p_value_kendall)
+    P_cor_coe=str(np.round(corr_coeff,3))
+    P_pval=str(np.round(p_value_pearson,3))
+    if float(P_pval)==0:
+        P_pval=str(p_value_pearson)
+    text_file.write('\n'+color+','+slope+'$\pm$'+slope_err+','+intercept+'$\pm$'+intercept_err+','+K_cor_coe+','+K_pval+','+P_cor_coe+','+P_pval)
+    
+    ax3.yaxis.set_ticks_position('both')
+    ax3.xaxis.set_ticks_position('both')
+    ax3.errorbar(logmass,w1b_color,xerr=logmassperr,yerr=w1b_color_err,ls='')
+    ax3.scatter(logmass,w1b_color)
+    ax3.set_ylabel('w1-b Color')
+    x1=logmass
+    x1sig=logmassperr
+    y1=w1b_color
+    y1sig=w1b_color_err
+    x=[]
+    xsig=[]
+    y=[]
+    ysig=[]
+    for i in range(len(x1)):
+        if str(x1[i])!='nan':
+            if str(y1[i])!='nan':
+                if str(x1sig[i])!='nan':
+                    if str(y1sig[i])!='nan':
+                        x.append(x1[i])
+                        y.append(y1[i])
+                        xsig.append(x1sig[i])
+                        ysig.append(y1sig[i])
+    corr_coeff, p_value_pearson=stats.pearsonr(x,y)
+    tau, p_value_kendall=stats.kendalltau(x,y)
+    lm= linmix.LinMix(x, y, xsig, ysig, K=2)
+    lm.run_mcmc(silent=True)
+    for i in range(0, len(lm.chain), 25):
+        xs = np.arange(6,13)
+        ys = lm.chain[i]['alpha'] + xs * lm.chain[i]['beta']
+        ax3.plot(xs, ys, color='r', alpha=0.02)
+    intercept_array=[]
+    slope_array=[]
+    for i in range(0, len(lm.chain), 25):
+        intercept=lm.chain[i]['alpha']
+        slope=lm.chain[i]['beta']
+        intercept_array.append(intercept)
+        slope_array.append(slope)
+    mean_intercept=np.mean(intercept_array)
+    std_intercept=np.std(intercept_array)
+    mean_slope=np.mean(slope_array)
+    std_slope=np.std(slope_array)
+    x_mean=np.arange(6,13)
+    y_mean=mean_intercept+x_mean*mean_slope
+    ax3.plot(x_mean, y_mean, color='k')
+    #Record data
+    color='w1-b'
+    slope=str(np.round(mean_slope,3))
+    slope_err=str(np.round(std_slope,3))
+    intercept=str(np.round(mean_intercept,3))
+    intercept_err=str(np.round(std_intercept,3))
+    K_cor_coe=str(np.round(tau,3))
+    K_pval=str(np.round(p_value_kendall,3))
+    if float(K_pval)==0:
+        K_pval=str(p_value_kendall)
+    P_cor_coe=str(np.round(corr_coeff,3))
+    P_pval=str(np.round(p_value_pearson,3))
+    if float(P_pval)==0:
+        P_pval=str(p_value_pearson)
+    text_file.write('\n'+color+','+slope+'$\pm$'+slope_err+','+intercept+'$\pm$'+intercept_err+','+K_cor_coe+','+K_pval+','+P_cor_coe+','+P_pval)
+    
+    ax5.yaxis.set_ticks_position('both')
+    ax5.xaxis.set_ticks_position('both')
+    ax5.errorbar(logmass,m2b_color,xerr=logmassperr,yerr=m2b_color_err,ls='')
+    ax5.scatter(logmass,m2b_color)
+    ax5.set_xlabel('log(Mass)')
+    ax5.set_ylabel('m2-b Color')
+    x1=logmass
+    x1sig=logmassperr
+    y1=m2b_color
+    y1sig=m2b_color_err
+    x=[]
+    xsig=[]
+    y=[]
+    ysig=[]
+    for i in range(len(x1)):
+        if str(x1[i])!='nan':
+            if str(y1[i])!='nan':
+                if str(x1sig[i])!='nan':
+                    if str(y1sig[i])!='nan':
+                        x.append(x1[i])
+                        y.append(y1[i])
+                        xsig.append(x1sig[i])
+                        ysig.append(y1sig[i])
+    corr_coeff, p_value_pearson=stats.pearsonr(x,y)
+    tau, p_value_kendall=stats.kendalltau(x,y)
+    lm= linmix.LinMix(x, y, xsig, ysig, K=2)
+    lm.run_mcmc(silent=True)
+    for i in range(0, len(lm.chain), 25):
+        xs = np.arange(6,13)
+        ys = lm.chain[i]['alpha'] + xs * lm.chain[i]['beta']
+        ax5.plot(xs, ys, color='r', alpha=0.02)
+    intercept_array=[]
+    slope_array=[]
+    for i in range(0, len(lm.chain), 25):
+        intercept=lm.chain[i]['alpha']
+        slope=lm.chain[i]['beta']
+        intercept_array.append(intercept)
+        slope_array.append(slope)
+    mean_intercept=np.mean(intercept_array)
+    std_intercept=np.std(intercept_array)
+    mean_slope=np.mean(slope_array)
+    std_slope=np.std(slope_array)
+    x_mean=np.arange(6,13)
+    y_mean=mean_intercept+x_mean*mean_slope
+    ax5.plot(x_mean, y_mean, color='k')
+    #Record data
+    color='m2-b'
+    slope=str(np.round(mean_slope,3))
+    slope_err=str(np.round(std_slope,3))
+    intercept=str(np.round(mean_intercept,3))
+    intercept_err=str(np.round(std_intercept,3))
+    K_cor_coe=str(np.round(tau,3))
+    K_pval=str(np.round(p_value_kendall,3))
+    if float(K_pval)==0:
+        K_pval=str(p_value_kendall)
+    P_cor_coe=str(np.round(corr_coeff,3))
+    P_pval=str(np.round(p_value_pearson,3))
+    if float(P_pval)==0:
+        P_pval=str(p_value_pearson)
+    text_file.write('\n'+color+','+slope+'$\pm$'+slope_err+','+intercept+'$\pm$'+intercept_err+','+K_cor_coe+','+K_pval+','+P_cor_coe+','+P_pval)
+    
+    ax2.yaxis.set_ticks_position('both')
+    ax2.xaxis.set_ticks_position('both')
+    ax2.errorbar(logOH,ub_color,xerr=logOHperr,yerr=ub_color_err,ls='')
+    ax2.scatter(logOH,ub_color)
+    x1=logOH
+    x1sig=logOHperr
+    y1=ub_color
+    y1sig=ub_color_err
+    x=[]
+    xsig=[]
+    y=[]
+    ysig=[]
+    for i in range(len(x1)):
+        if str(x1[i])!='nan':
+            if str(y1[i])!='nan':
+                if str(x1sig[i])!='nan':
+                    if str(y1sig[i])!='nan':
+                        x.append(x1[i])
+                        y.append(y1[i])
+                        xsig.append(x1sig[i])
+                        ysig.append(y1sig[i])
+    corr_coeff, p_value_pearson=stats.pearsonr(x,y)
+    tau, p_value_kendall=stats.kendalltau(x,y)
+    lm= linmix.LinMix(x, y, xsig, ysig, K=2)
+    lm.run_mcmc(silent=True)
+    for i in range(0, len(lm.chain), 25):
+        xs = np.arange(8,10)
+        ys = lm.chain[i]['alpha'] + xs * lm.chain[i]['beta']
+        if i==0:
+            ax2.plot(xs, ys, color='r', alpha=0.3, label='MCMC Fit Lines')
+        else:
+            ax2.plot(xs, ys, color='r', alpha=0.02)
+    intercept_array=[]
+    slope_array=[]
+    for i in range(0, len(lm.chain), 25):
+        intercept=lm.chain[i]['alpha']
+        slope=lm.chain[i]['beta']
+        intercept_array.append(intercept)
+        slope_array.append(slope)
+    mean_intercept=np.mean(intercept_array)
+    std_intercept=np.std(intercept_array)
+    mean_slope=np.mean(slope_array)
+    std_slope=np.std(slope_array)
+    x_mean=np.arange(8,10)
+    y_mean=mean_intercept+x_mean*mean_slope
+    ax2.plot(x_mean, y_mean, color='k', label='average fit')
+    ax2.legend()
+    #Record data
+    filename='MCMC_Regression_For_Color_vs_Metallicity_For_Poserr.txt'
+    text_file=open(filename,'a+')
+    color='u-b'
+    slope=str(np.round(mean_slope,3))
+    slope_err=str(np.round(std_slope,3))
+    intercept=str(np.round(mean_intercept,3))
+    intercept_err=str(np.round(std_intercept,3))
+    K_cor_coe=str(np.round(tau,3))
+    K_pval=str(np.round(p_value_kendall,3))
+    if float(K_pval)==0:
+        K_pval=str(p_value_kendall)
+    P_cor_coe=str(np.round(corr_coeff,3))
+    P_pval=str(np.round(p_value_pearson,3))
+    if float(P_pval)==0:
+        P_pval=str(p_value_pearson)
+    text_file.write('\n'+color+','+slope+'$\pm$'+slope_err+','+intercept+'$\pm$'+intercept_err+','+K_cor_coe+','+K_pval+','+P_cor_coe+','+P_pval)
+    
+    ax4.yaxis.set_ticks_position('both')
+    ax4.xaxis.set_ticks_position('both')
+    ax4.errorbar(logOH,w1b_color,xerr=logOHperr,yerr=w1b_color_err,ls='')
+    ax4.scatter(logOH,w1b_color)
+    x1=logOH
+    x1sig=logOHperr
+    y1=w1b_color
+    y1sig=w1b_color_err
+    x=[]
+    xsig=[]
+    y=[]
+    ysig=[]
+    for i in range(len(x1)):
+        if str(x1[i])!='nan':
+            if str(y1[i])!='nan':
+                if str(x1sig[i])!='nan':
+                    if str(y1sig[i])!='nan':
+                        x.append(x1[i])
+                        y.append(y1[i])
+                        xsig.append(x1sig[i])
+                        ysig.append(y1sig[i])
+    corr_coeff, p_value_pearson=stats.pearsonr(x,y)
+    tau, p_value_kendall=stats.kendalltau(x,y)
+    lm= linmix.LinMix(x, y, xsig, ysig, K=2)
+    lm.run_mcmc(silent=True)
+    for i in range(0, len(lm.chain), 25):
+        xs = np.arange(8,10)
+        ys = lm.chain[i]['alpha'] + xs * lm.chain[i]['beta']
+        ax4.plot(xs, ys, color='r', alpha=0.02)
+    intercept_array=[]
+    slope_array=[]
+    for i in range(0, len(lm.chain), 25):
+        intercept=lm.chain[i]['alpha']
+        slope=lm.chain[i]['beta']
+        intercept_array.append(intercept)
+        slope_array.append(slope)
+    mean_intercept=np.mean(intercept_array)
+    std_intercept=np.std(intercept_array)
+    mean_slope=np.mean(slope_array)
+    std_slope=np.std(slope_array)
+    x_mean=np.arange(8,10)
+    y_mean=mean_intercept+x_mean*mean_slope
+    ax4.plot(x_mean, y_mean, color='k')
+    #Record data
+    color='w1-b'
+    slope=str(np.round(mean_slope,3))
+    slope_err=str(np.round(std_slope,3))
+    intercept=str(np.round(mean_intercept,3))
+    intercept_err=str(np.round(std_intercept,3))
+    K_cor_coe=str(np.round(tau,3))
+    K_pval=str(np.round(p_value_kendall,3))
+    if float(K_pval)==0:
+        K_pval=str(p_value_kendall)
+    P_cor_coe=str(np.round(corr_coeff,3))
+    P_pval=str(np.round(p_value_pearson,3))
+    if float(P_pval)==0:
+        P_pval=str(p_value_pearson)
+    text_file.write('\n'+color+','+slope+'$\pm$'+slope_err+','+intercept+'$\pm$'+intercept_err+','+K_cor_coe+','+K_pval+','+P_cor_coe+','+P_pval)
+    
+    ax6.yaxis.set_ticks_position('both')
+    ax6.xaxis.set_ticks_position('both')
+    ax6.errorbar(logOH,m2b_color,xerr=logOHperr,yerr=m2b_color_err,ls='')
+    ax6.scatter(logOH,m2b_color)
+    ax6.set_xlabel('log(OH) Metallicity')
+    x1=logOH
+    x1sig=logOHperr
+    y1=m2b_color
+    y1sig=m2b_color_err
+    x=[]
+    xsig=[]
+    y=[]
+    ysig=[]
+    for i in range(len(x1)):
+        if str(x1[i])!='nan':
+            if str(y1[i])!='nan':
+                if str(x1sig[i])!='nan':
+                    if str(y1sig[i])!='nan':
+                        x.append(x1[i])
+                        y.append(y1[i])
+                        xsig.append(x1sig[i])
+                        ysig.append(y1sig[i])
+    corr_coeff, p_value_pearson=stats.pearsonr(x,y)
+    tau, p_value_kendall=stats.kendalltau(x,y)
+    lm= linmix.LinMix(x, y, xsig, ysig, K=2)
+    lm.run_mcmc(silent=True)
+    for i in range(0, len(lm.chain), 25):
+        xs = np.arange(8,10)
+        ys = lm.chain[i]['alpha'] + xs * lm.chain[i]['beta']
+        ax6.plot(xs, ys, color='r', alpha=0.02)
+    intercept_array=[]
+    slope_array=[]
+    for i in range(0, len(lm.chain), 25):
+        intercept=lm.chain[i]['alpha']
+        slope=lm.chain[i]['beta']
+        intercept_array.append(intercept)
+        slope_array.append(slope)
+    mean_intercept=np.mean(intercept_array)
+    std_intercept=np.std(intercept_array)
+    mean_slope=np.mean(slope_array)
+    std_slope=np.std(slope_array)
+    x_mean=np.arange(8,10)
+    y_mean=mean_intercept+x_mean*mean_slope
+    ax6.plot(x_mean, y_mean, color='k')
+    #Record data
+    color='m2-b'
+    slope=str(np.round(mean_slope,3))
+    slope_err=str(np.round(std_slope,3))
+    intercept=str(np.round(mean_intercept,3))
+    intercept_err=str(np.round(std_intercept,3))
+    K_cor_coe=str(np.round(tau,3))
+    K_pval=str(np.round(p_value_kendall,3))
+    if float(K_pval)==0:
+        K_pval=str(p_value_kendall)
+    P_cor_coe=str(np.round(corr_coeff,3))
+    P_pval=str(np.round(p_value_pearson,3))
+    if float(P_pval)==0:
+        P_pval=str(p_value_pearson)
+    text_file.write('\n'+color+','+slope+'$\pm$'+slope_err+','+intercept+'$\pm$'+intercept_err+','+K_cor_coe+','+K_pval+','+P_cor_coe+','+P_pval)
+    
+    f.suptitle('Color vs Mass and Metallicity for Positive Error',y=0.91)
+    plt.savefig('Color_vs_Mass_and_Metallicity_for_Positive_Error')
+    
+
+
+############
+
+def Import_Data(path):
+    data=np.genfromtxt(path, delimiter=',', dtype=str, comments='#', missing_values='Nan', unpack=True)
+    return(data)
+
+############
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+import linmix
+import os
+from astropy.io import fits
+from astropy.table import Table
+from scipy import stats
+from sklearn.utils import resample
+import itertools
+
+
+#Set plotting parameters
+#https://matplotlib.org/users/customizing.html
+plt.rcParams['xtick.labelsize']=8
+plt.rcParams['ytick.labelsize']=8
+plt.rcParams['xtick.direction']='in'
+plt.rcParams['ytick.direction']='in'
+plt.rcParams['figure.figsize']=[8.8,10]
+plt.rcParams['axes.labelsize']=12
+plt.rcParams['axes.titlesize']=14
+plt.rcParams['legend.fontsize']=10
+plt.rcParams['xtick.major.size']=6
+plt.rcParams['xtick.minor.size']=3
+plt.rcParams['xtick.minor.visible']=True
+plt.rcParams['ytick.major.size']=6
+plt.rcParams['ytick.minor.size']=3
+plt.rcParams['ytick.minor.visible']=True
+plt.rcParams['savefig.format']='jpeg'
+plt.rcParams['savefig.dpi']=250
+plt.rcParams['figure.dpi']=250
+plt.rcParams['lines.markersize']=2.0
+plt.rcParams['lines.linewidth']=0.5
+plt.rcParams['text.usetex']=False #command to process all strings using Latex
+plt.rcParams['figure.subplot.hspace']=0
+plt.rcParams['figure.subplot.wspace']=0
+plt.rcParams['errorbar.capsize']=0.5
+
+path='/Users/nicole/Documents/A_and_M_REU/SNe_FITS/Pan_et_al_data/metallicity_allcolumns.csv'
+snnames,z,dm15,dm15err,phase,hostname,hostreddening,hostmorphology,hubbletype,logmass,logmassperr,logmnerr,logOH,logOHperr,logOHnerr,AGNflag,f2535,f2535err,f3025,f3025err,bpeak_w2_mag,bpeak_m2_mag,bpeak_w1_mag,bpeak_uu_mag,bpeak_bb_mag,bpeak_vv_mag,bpeak_w2_magerr,bpeak_m2_magerr,bpeak_w1_magerr,bpeak_uu_magerr,bpeak_bb_magerr,bpeak_vv_magerr,mwreddening=np.genfromtxt(path, delimiter=',', dtype=str, comments='#', missing_values='Nan', unpack=True)
+
+passband_dict={}
+passband_dict['bpeak_w2_mag']=[float(i) for i in bpeak_w2_mag]
+passband_dict['bpeak_m2_mag']=[float(i) for i in bpeak_m2_mag]
+passband_dict['bpeak_w1_mag']=[float(i) for i in bpeak_w1_mag]
+passband_dict['bpeak_uu_mag']=[float(i) for i in bpeak_uu_mag]
+passband_dict['bpeak_bb_mag']=[float(i) for i in bpeak_bb_mag]
+passband_dict['bpeak_vv_mag']=[float(i) for i in bpeak_vv_mag]
+hostreddening=[float(i) for i in hostreddening]
+mwreddening=[float(i) for i in mwreddening]
+#list of extinction constant for filters w2,m2,w1,uu,bb,vv
+constant=[6.2,8.01,5.43,4.92,4.16,3.16]
+#extinction is bpeak_mag-hostreddening*filter_constant-mwreddening*filter_constant
+passband=['w2','m2','w1','uu','bb','vv']
+for j in range(len(passband)):
+    pas=passband[j]
+    passband_dict['bpeak_'+pas+'_mag_corr']=[]
+    obs_mag=passband_dict['bpeak_'+pas+'_mag']
+    for i in range(len(obs_mag)):
+        value=obs_mag[i]-hostreddening[i]*constant[j]-mwreddening[i]*constant[j]
+        passband_dict['bpeak_'+pas+'_mag_corr'].append(value)
+
+color_dm15b_poserr()
+

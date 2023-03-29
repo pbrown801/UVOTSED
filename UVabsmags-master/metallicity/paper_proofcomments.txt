@@ -1,0 +1,96 @@
+Q1 the references could be moved up or left here.
+
+Q3 here are bibtex entries for arxiv papers which can be updated.
+The Pan et al. paper has also been now published, but this paper is referencing the arxiv version
+
+
+
+@ARTICLE{2019RAA....19..121Z,
+       author = {{Zhou}, Li and {Liang}, Yan-Chun and {Ge}, Jun-Qiang and {Shao}, Xu and
+         {Chen}, Xiao-Yan and {Deng}, Li-Cai},
+        title = "{The local properties of supernova explosions and their host galaxies}",
+      journal = {Research in Astronomy and Astrophysics},
+     keywords = {Astrophysics - Astrophysics of Galaxies},
+         year = "2019",
+        month = "Aug",
+       volume = {19},
+       number = {8},
+          eid = {121},
+        pages = {121},
+          doi = {10.1088/1674-4527/19/8/121},
+archivePrefix = {arXiv},
+       eprint = {1907.03574},
+ primaryClass = {astro-ph.GA},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2019RAA....19..121Z},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2015MNRAS.449.2514K,
+       author = {{Kuin}, N.~P.~M. and {Landsman}, W. and {Breeveld}, A.~A. and
+         {Page}, M.~J. and {Lamoureux}, H. and {James}, C. and {Mehdipour}, M. and
+         {Still}, M. and {Yershov}, V. and {Brown}, P.~J. and {Carter}, M. and
+         {Mason}, K.~O. and {Kennedy}, T. and {Marshall}, F. and
+         {Roming}, P.~W.~A. and {Siegel}, M. and {Oates}, S. and {Smith}, P.~J. and
+         {De Pasquale}, M.},
+        title = "{Calibration of the Swift-UVOT ultraviolet and visible grisms}",
+      journal = {\mnras},
+     keywords = {instrumentation: spectrographs, space vehicles: instruments, techniques: imaging spectroscopy, Astrophysics - Instrumentation and Methods for Astrophysics},
+         year = "2015",
+        month = "May",
+       volume = {449},
+       number = {3},
+        pages = {2514-2538},
+          doi = {10.1093/mnras/stv408},
+archivePrefix = {arXiv},
+       eprint = {1501.02433},
+ primaryClass = {astro-ph.IM},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2015MNRAS.449.2514K},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{2018ApJ...867...56B,
+       author = {{Brown}, Peter J. and {Perry}, Jonathan M. and {Beeny}, Britton A. and
+         {Milne}, Peter A. and {Wang}, Xiaofeng},
+        title = "{The Ultraviolet Colors of Type Ia Supernovae and Their Photospheric Velocities}",
+      journal = {\apj},
+     keywords = {techniques: photometric, supernovae: general, distance scale, ultraviolet: general, Astrophysics - High Energy Astrophysical Phenomena},
+         year = "2018",
+        month = "Nov",
+       volume = {867},
+       number = {1},
+          eid = {56},
+        pages = {56},
+          doi = {10.3847/1538-4357/aae1ad},
+archivePrefix = {arXiv},
+       eprint = {1807.10391},
+ primaryClass = {astro-ph.HE},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018ApJ...867...56B},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+Q4
+
+HEASARC
+
+This is the best reference I found for the reference recommended from the HEASARC website:
+
+
+@MISC{Heasoft_2014,
+       author = {Nasa High Energy Astrophysics Science Archive Research Center (Heasarc)}},
+        title = "{HEAsoft: Unified Release of FTOOLS and XANADU}",
+     keywords = {Software, NASA},
+         year = "2014",
+        month = "Aug",
+          eid = {ascl:1408.004},
+        pages = {ascl:1408.004},
+archivePrefix = {ascl},
+       eprint = {1408.004},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2014ascl.soft08004N},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+The ASCL code record is here:
+https://ascl.net/1408.004
+
