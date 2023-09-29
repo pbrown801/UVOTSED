@@ -247,6 +247,7 @@ def sed_checker(targ_name):
 	for i in range(len(miz1)):
 		if miz1[i] <= miz3[9]:
 			driz = runsed2(miz2[i],miz1[i])
+			fulcor = fulcor.append(driz)
 
 	end = time.time()
 	print('Time to completion is '+str(end-start))
