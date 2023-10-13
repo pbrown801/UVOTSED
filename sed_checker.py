@@ -38,23 +38,23 @@ def sed_checker(targ_name):
 
 	#Set up Swift UVOT filters in order to generate SEDS
 
-	Udata = pd.read_csv('UVabsmags-master/filters/U_P08.txt',delim_whitespace=True,comment='#')
+	Udata = pd.read_csv('filters/U_P08.txt',delim_whitespace=True,comment='#')
 	Udata.columns = ['Wavelength','Area']
 
-	Bdata = pd.read_csv('UVabsmags-master/filters/B_P08.txt',delim_whitespace=True,comment='#')
+	Bdata = pd.read_csv('filters/B_P08.txt',delim_whitespace=True,comment='#')
 	Bdata.columns = ['Wavelength','Area']
 
-	Vdata = pd.read_csv('UVabsmags-master/filters/V_P08.txt',delim_whitespace=True,comment='#')
+	Vdata = pd.read_csv('filters/V_P08.txt',delim_whitespace=True,comment='#')
 	Vdata.columns = ['Wavelength','Area']
 
 
-	W2data = pd.read_csv('UVabsmags-master/filters/UVW2_B11.txt',delim_whitespace=True,comment='#')
+	W2data = pd.read_csv('filters/UVW2_B11.txt',delim_whitespace=True,comment='#')
 	W2data.columns = ['Wavelength','Area']
 
-	M2data = pd.read_csv('UVabsmags-master/filters/UVM2_B11.txt',delim_whitespace=True,comment='#')
+	M2data = pd.read_csv('filters/UVM2_B11.txt',delim_whitespace=True,comment='#')
 	M2data.columns = ['Wavelength','Area']
 
-	W1data = pd.read_csv('UVabsmags-master/filters/UVW1_B11.txt',delim_whitespace=True,comment='#')
+	W1data = pd.read_csv('filters/UVW1_B11.txt',delim_whitespace=True,comment='#')
 	W1data.columns = ['Wavelength','Area']
 
 

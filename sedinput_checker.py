@@ -7,6 +7,7 @@ import extinction
 import time
 import sys
 import os
+import math
 import matplotlib.colors as colors
 from snpy.utils.IRSA_dust_getval import get_dust_RADEC, get_dust_sigma_RADEC
 import glob
@@ -18,22 +19,22 @@ from astroquery.irsa_dust import IrsaDust
 ###########
 #Set up Swift UVOT filters 
 
-Udata = pd.read_csv('UVabsmags-master/filters/U_P08.txt',delim_whitespace=True,comment='#')
+Udata = pd.read_csv('filters/U_P08.txt',delim_whitespace=True,comment='#')
 Udata.columns = ['Wavelength','Area']
 
-Bdata = pd.read_csv('UVabsmags-master/filters/B_P08.txt',delim_whitespace=True,comment='#')
+Bdata = pd.read_csv('filters/B_P08.txt',delim_whitespace=True,comment='#')
 Bdata.columns = ['Wavelength','Area']
 
-Vdata = pd.read_csv('UVabsmags-master/filters/V_P08.txt',delim_whitespace=True,comment='#')
+Vdata = pd.read_csv('filters/V_P08.txt',delim_whitespace=True,comment='#')
 Vdata.columns = ['Wavelength','Area']
 
-W2data = pd.read_csv('UVabsmags-master/filters/UVW2_B11.txt',delim_whitespace=True,comment='#')
+W2data = pd.read_csv('filters/UVW2_B11.txt',delim_whitespace=True,comment='#')
 W2data.columns = ['Wavelength','Area']
 
-M2data = pd.read_csv('UVabsmags-master/filters/UVM2_B11.txt',delim_whitespace=True,comment='#')
+M2data = pd.read_csv('filters/UVM2_B11.txt',delim_whitespace=True,comment='#')
 M2data.columns = ['Wavelength','Area']
 
-W1data = pd.read_csv('UVabsmags-master/filters/UVW1_B11.txt',delim_whitespace=True,comment='#')
+W1data = pd.read_csv('filters/UVW1_B11.txt',delim_whitespace=True,comment='#')
 W1data.columns = ['Wavelength','Area']
 
 SWIFT_UVOT_B = Filter(Bdata.Wavelength,Bdata.Area,name = 'SWIFT_UVOT_B',dtype = 'photon',unit = 'Angstrom')
@@ -233,14 +234,12 @@ def sedinput_checker(targ_name,FilterVec,obs_col, dm15, z, mwebv):
 
 	#Initialize program with the inputs
 	start = time.time()
-	print("starting at "+str(time.time()))
 	#data file of the SNe in the sample
 	#df = pd.read_csv('SNPY_Sample_Decline.csv')
 	#tp = df.loc[(df.sname == targ_name)]
 	#tp = tp.reset_index(drop=True)
 	#z = tp.z[0]
 	#dm15 = tp.dm[0]
-	print("0 "+str(time.time()))
 	#generate folder with for each supernova to hold the outputs
 	#snm = tp.sname[0]
 	#if path exists == true, output path = path. Else, create folder and set output path
@@ -253,6 +252,7 @@ def sedinput_checker(targ_name,FilterVec,obs_col, dm15, z, mwebv):
 
 	# after this, all print statements go to this file
 	sys.stdout = open(opath+'output.txt', 'w')
+	print("starting at "+str(time.time()))
 
 
 	#Setup up the spectral models based on the observed templates
@@ -308,6 +308,7 @@ def sedinput_checker(targ_name,FilterVec,obs_col, dm15, z, mwebv):
 
 	#saves the output
 	fulcor.to_csv(opath+'output.csv',index=False)
+	sys.stdout.close()
 	return
 
 
