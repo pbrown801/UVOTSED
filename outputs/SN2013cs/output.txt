@@ -1753,6 +1753,357 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+outputs/models/SN2013dy_2.7_0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_3.1_-0.1_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_2.7_-0.5_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_2.7_-0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_1.8_0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_1.8_0.3_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_2.7_0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_3.1_0.0_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_3.1_0.1_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_1.8_-0.1_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_2.7_0.3_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_2.7_-0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_1.8_0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_2.7_-0.1_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_3.1_-0.5_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_1.8_0.1_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_3.1_0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_1.8_-0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_2.7_0.0_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_2.7_0.1_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_3.1_0.3_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_1.8_0.0_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_3.1_-0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_3.1_0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_1.8_-0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_3.1_-0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+outputs/models/SN2013dy_1.8_-0.5_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.1_3.1_0.0_.csv']
 outputs/models/foley1.1_3.1_0.0_.csv
 Warning: assuming units are consistent
@@ -4813,7 +5164,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
+-0.06836410000000002 0.10276409999999911 2.6 0.2671866599999977
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4862,7 +5213,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
+-0.06836410000000002 0.10276409999999911 2.6 0.2671866599999977
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4911,7 +5262,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
+-0.06836410000000002 0.10276409999999911 2.6 0.2671866599999977
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4960,7 +5311,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
+-0.06836410000000002 0.10276409999999911 2.6 0.2671866599999977
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -5009,7 +5360,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
+-0.06836410000000002 0.10276409999999911 2.6 0.2671866599999977
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -5058,7 +5409,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
+-0.06836410000000002 0.10276409999999911 2.6 0.2671866599999977
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -5107,7 +5458,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
+-0.06836410000000002 0.10276409999999911 2.6 0.2671866599999977
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -5156,7 +5507,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
+-0.06836410000000002 0.10276409999999911 2.6 0.2671866599999977
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -5205,7 +5556,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
+-0.06836410000000002 0.10276409999999911 2.6 0.2671866599999977
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -5254,7 +5605,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
+-0.06836410000000002 0.10276409999999911 2.6 0.2671866599999977
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -5267,53 +5618,4 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
--0.06646600000000001 0.17262636529541017 2.6 0.44882854976806646
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Time to completion is 526.1252980232239
+Time to completion is 619.4236612319946

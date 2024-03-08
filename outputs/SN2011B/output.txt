@@ -1051,20 +1051,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_2.7_0.0_.csv']
-outputs/models/foley1.15_2.7_0.0_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.5_3.1_-0.1_.csv']
 outputs/models/foley1.5_3.1_-0.1_.csv
 Warning: assuming units are consistent
@@ -1081,6 +1067,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.5_3.1_0.2_.csv']
 outputs/models/foley1.5_3.1_0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_3.1_0.2_.csv']
+outputs/models/foley1.55_3.1_0.2_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -1177,20 +1177,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_2.7_-0.4_.csv']
-outputs/models/foley1.15_2.7_-0.4_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.5_2.7_0.0_.csv']
 outputs/models/foley1.5_2.7_0.0_.csv
 Warning: assuming units are consistent
@@ -1219,20 +1205,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_3.1_0.2_.csv']
-outputs/models/foley1.15_3.1_0.2_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.3_1.8_0.0_.csv']
 outputs/models/foley1.3_1.8_0.0_.csv
 Warning: assuming units are consistent
@@ -1247,8 +1219,36 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_2.7_-0.2_.csv']
+outputs/models/foley1.55_2.7_-0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.2_2.7_0.0_.csv']
 outputs/models/foley1.2_2.7_0.0_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_2.7_0.0_.csv']
+outputs/models/foley1.55_2.7_0.0_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -1359,20 +1359,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_1.8_0.1_.csv']
-outputs/models/foley1.15_1.8_0.1_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.3_3.1_0.3_.csv']
 outputs/models/foley1.3_3.1_0.3_.csv
 Warning: assuming units are consistent
@@ -1429,8 +1415,36 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_1.8_-0.1_.csv']
+outputs/models/foley1.55_1.8_-0.1_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.4_2.7_0.1_.csv']
 outputs/models/foley1.4_2.7_0.1_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_1.8_0.1_.csv']
+outputs/models/foley1.55_1.8_0.1_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -1583,6 +1597,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_1.8_0.0_.csv']
+outputs/models/foley1.55_1.8_0.0_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.45_3.1_0.0_.csv']
 outputs/models/foley1.45_3.1_0.0_.csv
 Warning: assuming units are consistent
@@ -1641,20 +1669,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.45_1.8_-0.1_.csv']
 outputs/models/foley1.45_1.8_-0.1_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-['outputs/models/foley1.15_1.8_0.0_.csv']
-outputs/models/foley1.15_1.8_0.0_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -1779,6 +1793,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_2.7_0.1_.csv']
+outputs/models/foley1.55_2.7_0.1_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.4_1.8_0.1_.csv']
 outputs/models/foley1.4_1.8_0.1_.csv
 Warning: assuming units are consistent
@@ -1795,20 +1823,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.2_2.7_0.1_.csv']
 outputs/models/foley1.2_2.7_0.1_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-['outputs/models/foley1.15_3.1_0.3_.csv']
-outputs/models/foley1.15_3.1_0.3_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -1849,20 +1863,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_3.1_-0.1_.csv']
-outputs/models/foley1.15_3.1_-0.1_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.2_2.7_-0.5_.csv']
 outputs/models/foley1.2_2.7_-0.5_.csv
 Warning: assuming units are consistent
@@ -1879,20 +1879,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.2_3.1_-0.1_.csv']
 outputs/models/foley1.2_3.1_-0.1_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-['outputs/models/foley1.15_2.7_-0.5_.csv']
-outputs/models/foley1.15_2.7_-0.5_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -1975,6 +1961,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_3.1_0.3_.csv']
+outputs/models/foley1.55_3.1_0.3_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.45_1.8_0.3_.csv']
 outputs/models/foley1.45_1.8_0.3_.csv
 Warning: assuming units are consistent
@@ -2003,20 +2003,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_2.7_0.1_.csv']
-outputs/models/foley1.15_2.7_0.1_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.35_3.1_-0.1_.csv']
 outputs/models/foley1.35_3.1_-0.1_.csv
 Warning: assuming units are consistent
@@ -2033,20 +2019,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.35_2.7_0.4_.csv']
 outputs/models/foley1.35_2.7_0.4_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-['outputs/models/foley1.15_1.8_-0.1_.csv']
-outputs/models/foley1.15_1.8_-0.1_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -2171,6 +2143,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_3.1_0.4_.csv']
+outputs/models/foley1.55_3.1_0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.3_1.8_-0.2_.csv']
 outputs/models/foley1.3_1.8_-0.2_.csv
 Warning: assuming units are consistent
@@ -2213,20 +2199,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_2.7_-0.2_.csv']
-outputs/models/foley1.15_2.7_-0.2_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.2_2.7_-0.2_.csv']
 outputs/models/foley1.2_2.7_-0.2_.csv
 Warning: assuming units are consistent
@@ -2241,8 +2213,8 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_3.1_0.4_.csv']
-outputs/models/foley1.15_3.1_0.4_.csv
+['outputs/models/foley1.55_2.7_-0.4_.csv']
+outputs/models/foley1.55_2.7_-0.4_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -2285,6 +2257,34 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.45_2.7_-0.4_.csv']
 outputs/models/foley1.45_2.7_-0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_2.7_-0.5_.csv']
+outputs/models/foley1.55_2.7_-0.5_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_3.1_-0.1_.csv']
+outputs/models/foley1.55_3.1_-0.1_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -2479,6 +2479,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_1.8_-0.5_.csv']
+outputs/models/foley1.55_1.8_-0.5_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.25_1.8_0.4_.csv']
 outputs/models/foley1.25_1.8_0.4_.csv
 Warning: assuming units are consistent
@@ -2605,6 +2619,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_2.7_0.4_.csv']
+outputs/models/foley1.55_2.7_0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.35_1.8_-0.4_.csv']
 outputs/models/foley1.35_1.8_-0.4_.csv
 Warning: assuming units are consistent
@@ -2647,22 +2675,22 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_3.1_-0.4_.csv']
-outputs/models/foley1.15_3.1_-0.4_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.5_2.7_0.4_.csv']
 outputs/models/foley1.5_2.7_0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_3.1_-0.2_.csv']
+outputs/models/foley1.55_3.1_-0.2_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -2717,20 +2745,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_2.7_0.4_.csv']
-outputs/models/foley1.15_2.7_0.4_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.5_3.1_-0.4_.csv']
 outputs/models/foley1.5_3.1_-0.4_.csv
 Warning: assuming units are consistent
@@ -2773,20 +2787,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_2.7_-0.1_.csv']
-outputs/models/foley1.15_2.7_-0.1_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.2_3.1_-0.5_.csv']
 outputs/models/foley1.2_3.1_-0.5_.csv
 Warning: assuming units are consistent
@@ -2803,20 +2803,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.2_2.7_-0.1_.csv']
 outputs/models/foley1.2_2.7_-0.1_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-['outputs/models/foley1.15_3.1_-0.5_.csv']
-outputs/models/foley1.15_3.1_-0.5_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -2885,36 +2871,8 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_1.8_-0.2_.csv']
-outputs/models/foley1.15_1.8_-0.2_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.3_2.7_-0.2_.csv']
 outputs/models/foley1.3_2.7_-0.2_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-['outputs/models/foley1.15_1.8_0.4_.csv']
-outputs/models/foley1.15_1.8_0.4_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -2941,8 +2899,36 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_1.8_0.4_.csv']
+outputs/models/foley1.55_1.8_0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.45_3.1_0.4_.csv']
 outputs/models/foley1.45_3.1_0.4_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_1.8_-0.4_.csv']
+outputs/models/foley1.55_1.8_-0.4_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3081,6 +3067,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_2.7_0.2_.csv']
+outputs/models/foley1.55_2.7_0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.2_2.7_0.2_.csv']
 outputs/models/foley1.2_2.7_0.2_.csv
 Warning: assuming units are consistent
@@ -3109,20 +3109,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_3.1_0.0_.csv']
-outputs/models/foley1.15_3.1_0.0_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.5_2.7_0.2_.csv']
 outputs/models/foley1.5_2.7_0.2_.csv
 Warning: assuming units are consistent
@@ -3137,8 +3123,8 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_3.1_-0.2_.csv']
-outputs/models/foley1.15_3.1_-0.2_.csv
+['outputs/models/foley1.55_3.1_-0.4_.csv']
+outputs/models/foley1.55_3.1_-0.4_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3235,22 +3221,22 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_3.1_0.0_.csv']
+outputs/models/foley1.55_3.1_0.0_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.5_3.1_0.0_.csv']
 outputs/models/foley1.5_3.1_0.0_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-['outputs/models/foley1.15_2.7_0.2_.csv']
-outputs/models/foley1.15_2.7_0.2_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3335,6 +3321,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.45_3.1_0.3_.csv']
 outputs/models/foley1.45_3.1_0.3_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_1.8_0.3_.csv']
+outputs/models/foley1.55_1.8_0.3_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3445,20 +3445,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_1.8_0.3_.csv']
-outputs/models/foley1.15_1.8_0.3_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.3_2.7_-0.5_.csv']
 outputs/models/foley1.3_2.7_-0.5_.csv
 Warning: assuming units are consistent
@@ -3503,20 +3489,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.25_3.1_-0.4_.csv']
 outputs/models/foley1.25_3.1_-0.4_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-['outputs/models/foley1.15_1.8_-0.5_.csv']
-outputs/models/foley1.15_1.8_-0.5_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3613,20 +3585,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_1.8_-0.4_.csv']
-outputs/models/foley1.15_1.8_-0.4_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.25_3.1_-0.5_.csv']
 outputs/models/foley1.25_3.1_-0.5_.csv
 Warning: assuming units are consistent
@@ -3685,20 +3643,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.3_3.1_0.0_.csv']
 outputs/models/foley1.3_3.1_0.0_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-['outputs/models/foley1.15_1.8_0.2_.csv']
-outputs/models/foley1.15_1.8_0.2_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3781,8 +3725,36 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_1.8_0.2_.csv']
+outputs/models/foley1.55_1.8_0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.4_2.7_0.2_.csv']
 outputs/models/foley1.4_2.7_0.2_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_1.8_-0.2_.csv']
+outputs/models/foley1.55_1.8_-0.2_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3865,20 +3837,6 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_2.7_0.3_.csv']
-outputs/models/foley1.15_2.7_0.3_.csv
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
-Warning: assuming units are consistent
 ['outputs/models/foley1.5_3.1_0.1_.csv']
 outputs/models/foley1.5_3.1_0.1_.csv
 Warning: assuming units are consistent
@@ -3909,6 +3867,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.45_1.8_0.1_.csv']
 outputs/models/foley1.45_1.8_0.1_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_3.1_0.1_.csv']
+outputs/models/foley1.55_3.1_0.1_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3977,6 +3949,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
+['outputs/models/foley1.55_3.1_-0.5_.csv']
+outputs/models/foley1.55_3.1_-0.5_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
 ['outputs/models/foley1.5_2.7_0.3_.csv']
 outputs/models/foley1.5_2.7_0.3_.csv
 Warning: assuming units are consistent
@@ -4005,8 +3991,8 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-['outputs/models/foley1.15_3.1_0.1_.csv']
-outputs/models/foley1.15_3.1_0.1_.csv
+['outputs/models/foley1.55_2.7_-0.1_.csv']
+outputs/models/foley1.55_2.7_-0.1_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4035,6 +4021,20 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 ['outputs/models/foley1.4_1.8_0.3_.csv']
 outputs/models/foley1.4_1.8_0.3_.csv
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+['outputs/models/foley1.55_2.7_0.3_.csv']
+outputs/models/foley1.55_2.7_0.3_.csv
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4111,7 +4111,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.041728 0.08116122753906073 2.6 0.2110191916015579
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4160,7 +4160,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.041728 0.08116122753906073 2.6 0.2110191916015579
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4209,7 +4209,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.041728 0.08116122753906073 2.6 0.2110191916015579
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4258,7 +4258,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.041728 0.08116122753906073 2.6 0.2110191916015579
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4307,7 +4307,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.041728 0.08116122753906073 2.6 0.2110191916015579
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4356,7 +4356,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.041728 0.08116122753906073 2.6 0.2110191916015579
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4405,7 +4405,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.041728 0.08116122753906073 2.6 0.2110191916015579
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4454,7 +4454,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.041728 0.08116122753906073 2.6 0.2110191916015579
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4503,7 +4503,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.041728 0.08116122753906073 2.6 0.2110191916015579
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4552,7 +4552,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.041728 0.08116122753906073 2.6 0.2110191916015579
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -4565,4 +4565,53 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-Time to completion is 418.1702802181244
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+-0.03897718000000003 0.025877179999998997 2.6 0.06728066799999739
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Warning: assuming units are consistent
+Time to completion is 479.7117691040039

@@ -2977,7 +2977,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.10294600000000002 0.035581946655273464 2.6 0.09251306130371101
+-0.10305179200000002 0.06205179200000037 2.6 0.16133465920000095
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3026,7 +3026,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.10294600000000002 0.035581946655273464 2.6 0.09251306130371101
+-0.10305179200000002 0.06205179200000037 2.6 0.16133465920000095
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3075,7 +3075,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.10294600000000002 0.035581946655273464 2.6 0.09251306130371101
+-0.10305179200000002 0.06205179200000037 2.6 0.16133465920000095
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3124,7 +3124,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.10294600000000002 0.035581946655273464 2.6 0.09251306130371101
+-0.10305179200000002 0.06205179200000037 2.6 0.16133465920000095
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3173,7 +3173,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.10294600000000002 0.035581946655273464 2.6 0.09251306130371101
+-0.10305179200000002 0.06205179200000037 2.6 0.16133465920000095
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3222,7 +3222,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.10294600000000002 0.035581946655273464 2.6 0.09251306130371101
+-0.10305179200000002 0.06205179200000037 2.6 0.16133465920000095
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3271,7 +3271,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.10294600000000002 0.035581946655273464 2.6 0.09251306130371101
+-0.10305179200000002 0.06205179200000037 2.6 0.16133465920000095
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3320,7 +3320,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.10294600000000002 0.035581946655273464 2.6 0.09251306130371101
+-0.10305179200000002 0.06205179200000037 2.6 0.16133465920000095
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3369,7 +3369,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.10294600000000002 0.035581946655273464 2.6 0.09251306130371101
+-0.10305179200000002 0.06205179200000037 2.6 0.16133465920000095
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3418,7 +3418,7 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
--0.10294600000000002 0.035581946655273464 2.6 0.09251306130371101
+-0.10305179200000002 0.06205179200000037 2.6 0.16133465920000095
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
@@ -3431,4 +3431,4 @@ Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
 Warning: assuming units are consistent
-Time to completion is 349.2252128124237
+Time to completion is 364.76418685913086

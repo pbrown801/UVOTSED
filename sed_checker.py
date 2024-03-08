@@ -20,7 +20,7 @@ def sed_checker(targ_name):
 	#Initialize program with the inputs
 	start = time.time()
 	#data file of the SNe in the sample
-	df = pd.read_csv('SNPY_Sample_Decline.csv')
+	df = pd.read_csv('SNPY_Sample_Decline_color2.csv')
 	tp = df.loc[(df.sname == targ_name)]
 	tp = tp.reset_index(drop=True)
 
@@ -253,7 +253,7 @@ def sed_checker(targ_name):
 	print('Time to completion is '+str(end-start))
 
 	#saves the output
-	fulcor.to_csv(opath+'output.csv',index=False)
+	fulcor.to_csv(opath+'output_color2.csv',index=False)
 	return
 
 
