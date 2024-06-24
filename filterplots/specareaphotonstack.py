@@ -10,8 +10,17 @@ from photoncount import photoncount
 # for each filter in 
 filterfiles = ['../filters/UVW2_2010.txt','../filters/UVM2_2010.txt','../filters/UVW1_2010.txt','../filters/U_UVOT.txt','../filters/B_UVOT.txt', '../filters/V_UVOT.txt']
 filternames = ['UVW2_2010','UVM2_2010','UVW1_2010','U_UVOT','B_UVOT','V_UVOT']
-spectralfiles = ['../spectra/SN2022hrs_muv_20220426.3_10.dat','../spectra/ptf11kly_20110907.obs.dat','../spectra/SN2016ccj_hst_20160514.dat']
-labellist = ['SN2016ccj_hst_20160514','ptf11kly_20110907','SN2022hrs_muv_20220426.3_10']
+
+spectralfiles = ['../spectra/SN2016ccj_peak_11fe_appended.dat', '../spectra/SN2011fe_peak_11fe_appended.dat', '../spectra/SN2022hrs_peak_11fe_appended.dat']
+labellist = ['SN2016ccj','SN2011fe','SN2022hrs']
+
+spectralfiles = ['../spectra/SN2011fe_peak_11fe_appended.dat', '../spectra/SN2016ccj_peak_11fe_appended.dat', '../spectra/SN2022hrs_peak_11fe_appended.dat']
+labellist = ['SN2011fe','SN2016ccj','SN2022hrs']
+
+spectralfiles = ['../spectra/SN2011fe_peak_11fe_appended.dat',  '../spectra/SN2022hrs_peak_11fe_appended.dat']
+labellist = ['SN2011fe','SN2022hrs']
+
+
 # make a stacked plot 3 plots high
 # top plot: spectra and flux
 # middle plot: effective area of the filter
@@ -43,7 +52,7 @@ def rangebin(rangemin,rangemax,wavelist, fluxlist):
       amendedflux.append(fluxlist[x])
   #print(len(amendedflux))
   #binning
-  binsize = (amendedwave[-1]-amendedwave[0])/641
+  binsize = (amendedwave[-1]-amendedwave[0])/641   # %%%%%%%%% generalize this for a different range  641 from 1600 to 8000 in bins of 10
   binmin = amendedwave[0]
   binmax = amendedwave[0] + binsize
   #need to have 641 wavelength indicies
@@ -53,9 +62,11 @@ def rangebin(rangemin,rangemax,wavelist, fluxlist):
     binwave = amendedwave
     binflux = amendedflux
     abmin = min(amendedwave)
+    abmax = max(amendedwave)
+
     for x in range(641-len(binwave)):
-      binwave.append(abmin-1)
-      binflux.append(0)
+      binwave.append(abmax+10)
+      binflux.append(binflux[-1])
   else:    
    for x in range(len(amendedwave)):
     if(binmin<amendedwave[x]<binmax):
@@ -88,10 +99,12 @@ def rangebin(rangemin,rangemax,wavelist, fluxlist):
     while(len(binwave)>641):
         del(binwave[640])
         del(binflux[640])
-
+#  print(wavelist)
+#  print(binwave)
+#  wait = input("Press Enter to continue.")
   return binwave, binflux    
 
-def loadtext(file,wavelist=[],fluxlist=[],range=5950):
+def loadtext(file,wavelist=[],fluxlist=[],range=8000):
   #x = 0
   #for file in filelist:
   f = open('' +file,'r') #open file
@@ -109,83 +122,123 @@ def loadtext(file,wavelist=[],fluxlist=[],range=5950):
    #x+=1     
   return wavelist, fluxlist
 
+
+
+############################
+
 x = 0
-for sfile in spectralfiles:
- y =0
- for filter in filterfiles:
+#for sfile in spectralfiles:
+# print(labellist[x])
+y =0
+for filter in filterfiles:
+    print(filter)
+    maxcounts1 = []
+    maxcounts2 = []
+    maxflux1 = []
+    maxflux2 =[]
     # Creating empty lists to contain  data
     print("Inner Loop Begin")
     wavelength_spectra, wavelength_filters, flux_spectra, area_filters = [],[],[],[]
-    wavelength_spectra, flux_spectra = loadtext(sfile,wavelist=wavelength_spectra,fluxlist=flux_spectra)
-    try:
-     print(wavelength_spectra==wavelength_filters)
-    except:
-        pass 
-    
-     
-
+    wavelength_spectra, flux_spectra = loadtext(spectralfiles[0],wavelist=wavelength_spectra,fluxlist=flux_spectra)
+ 
     #print("Plot 1")
     fig, axes = plt.subplots(3,1,figsize=setFigSizeInches('journal', subplots=(3,1)))                                                
     axes[0].plot(wavelength_spectra, flux_spectra)                    # Limit is 6000     
     #print(wavelength_spectra==wavelength_filters)                               
-    axes[0].set_xlabel('wavelength spectra')
-    axes[0].set_ylabel('flux spectra (ergs/s/cm^2)')
+    axes[0].set_xlabel('Wavelength [Angstroms]')
+    axes[0].set_ylabel('flux spectra [ergs/s/cm^2]')
     axes[0].set_xlim(1600,6000)
     axes[0].tick_params(direction="in")
+    maxflux1 = np.nanmax(flux_spectra)
+    plotlabelname=labellist[0]+'_'+filternames[y]+'.png'
+
+
+    if len(spectralfiles) > 1:
+       wavelength_spectra, wavelength_filters, flux_spectra, area_filters = [],[],[],[]
+       wavelength_spectra, flux_spectra = loadtext(spectralfiles[1],wavelist=wavelength_spectra,fluxlist=flux_spectra)
+       maxflux2 = np.nanmax(flux_spectra)
+       scale = (maxflux1/maxflux2)
+       flux_spectra=np.array(flux_spectra)
+       scaled_flux = (flux_spectra*scale)
+       axes[0].plot(wavelength_spectra, scaled_flux,linestyle='dashed')                   
+       plotlabelname=labellist[0]+'_'+labellist[1]+'_'+filternames[y]+'.png'
+     
+
+       if len(spectralfiles) > 2:
+          wavelength_spectra, wavelength_filters, flux_spectra, area_filters = [],[],[],[]
+          wavelength_spectra, flux_spectra = loadtext(spectralfiles[2],wavelist=wavelength_spectra,fluxlist=flux_spectra)
+          maxflux3 = np.nanmax(flux_spectra)
+          scale = (maxflux1/maxflux3)
+          scaled_flux = (np.array(flux_spectra)*scale)
+          axes[0].plot(wavelength_spectra, scaled_flux,linestyle='dotted')                    # Limit is 6000  
+          plotlabelname=labellist[0]+'_'+labellist[1]+'_'+labellist[2]+'_'+filternames[y]+'.png'
    
+
+
     wavelength_filters, area_filters = loadtext(filter,wavelist=wavelength_filters,fluxlist=area_filters)
-    try:
-     print(wavelength_spectra==wavelength_filters)
-    except:
-        pass 
+
     #print("Plot 2")
     #fig, axes = plt.subplots()                                                 
-    axes[1].plot(wavelength_filters, area_filters)
-    axes[1].set_xlabel('wavelength_filters')
-    #axes[1].set_xlabel('wavelength_filters')
-    axes[1].set_ylabel('area (cm)')
+    axes[1].plot(wavelength_filters, area_filters, label=filternames[y])
+    axes[1].set_xlabel('Wavelength [Angstroms]')
+    axes[1].set_ylabel('Effective Area [cm]')
     axes[1].set_xlim(1600,6000)
     axes[1].tick_params(direction="in")
-    try:
-     print(wavelength_spectra==wavelength_filters)
-    except:
-        pass 
-   
+    axes[1].legend()
+    lowerbound = 1600
+    upperbound = 8000 #5650
+
 
   # Third plot, plots wavelength_spectra against photon count
     specifiedfilter = filternames[y]
-    #print(specifiedfilter)
-    wavelength_spectra, flux_spectra = rangebin(1600,5650,wavelength_spectra, flux_spectra)
+   
+    print(specifiedfilter)
+    wavelength_spectra, wavelength_filters, flux_spectra, area_filters = [],[],[],[]
+    wavelength_spectra, flux_spectra = loadtext(spectralfiles[0],wavelist=wavelength_spectra,fluxlist=flux_spectra)
+    wavelength_spectra, flux_spectra = rangebin(lowerbound,upperbound,wavelength_spectra, flux_spectra)
     counts_array, sumcounts, amend, countsindex = photoncount(wavelength_spectra,flux_spectra, specificfilter = specifiedfilter)
-    axes[2].plot(wavelength_spectra, counts_array[countsindex])
-    axes[2].set_xlabel('wavelength')
-    axes[2].set_ylabel('photon count (photons)')
+    maxcounts1 = np.nanmax(counts_array[countsindex])
+    
+    axes[2].plot(wavelength_spectra, counts_array[countsindex]/maxcounts1,label=labellist[0])
+    axes[2].set_xlabel('Wavelength [Angstroms]')
+    axes[2].set_ylabel('Count Rate [photons/sec]')
     axes[2].set_xlim(1600,6000)
     axes[2].tick_params(direction="in")
-    try:
-     print(wavelength_spectra==wavelength_filters)
-    except:
-        pass 
 
-    for i in range(2):
-      #print("Third For")
-      if(i==x):
-        continue
-      else:
-        wavelength_spectra, flux_spectra = loadtext(spectralfiles[x])
-        wavelength_spectra, flux_spectra = rangebin(1600,5650,wavelength_spectra, flux_spectra)
-        counts_array, sumcounts, amend, countsindex = photoncount(wavelength_spectra,flux_spectra, specificfilter = specifiedfilter)
-        axes[2].plot(wavelength_spectra, counts_array[countsindex])
-    plt.tight_layout()
+#    for i in range(2):
+#      print(i, x)
+#      if(i==x):
+#        continue
+#      else:
+
+    if len(spectralfiles) > 1:
+
+       wavelength_spectra, wavelength_filters, flux_spectra, area_filters = [],[],[],[]
+       wavelength_spectra, flux_spectra = loadtext(spectralfiles[1],wavelist=wavelength_spectra,fluxlist=flux_spectra)
+       wavelength_spectra, flux_spectra = rangebin(lowerbound,upperbound,wavelength_spectra, flux_spectra)
+       counts_array, sumcounts, amend, countsindex = photoncount(wavelength_spectra,flux_spectra, specificfilter = specifiedfilter)
+       maxcounts2 = np.nanmax(counts_array[countsindex])
+       axes[2].plot(wavelength_spectra, counts_array[countsindex]/maxcounts2,label=labellist[1], linestyle='dashed')
+
+       if len(spectralfiles) > 2:
+ 
+          wavelength_spectra, wavelength_filters, flux_spectra, area_filters = [],[],[],[]
+          wavelength_spectra, flux_spectra = loadtext(spectralfiles[2],wavelist=wavelength_spectra,fluxlist=flux_spectra)
+          wavelength_spectra, flux_spectra = rangebin(lowerbound,upperbound,wavelength_spectra, flux_spectra)
+          counts_array, sumcounts, amend, countsindex = photoncount(wavelength_spectra,flux_spectra, specificfilter = specifiedfilter)
+          maxcounts3 = np.nanmax(counts_array[countsindex])
+          axes[2].plot(wavelength_spectra, counts_array[countsindex]/maxcounts3,label=labellist[2],linestyle='dotted')
+
+
+    plt.legend()
+    plt.savefig(plotlabelname, bbox_inches='tight')
     plt.show()
-    plt.close('all')
-    try:
-     print(wavelength_spectra==wavelength_filters)
-    except:
-        pass 
-    wavelength_spectra, wavelength_filters, flux_spectra, area_filters = [],[],[],[]
+
     y+=1
-x+=1
+    x+=1
+plt.close('fig')
+
+   
 
 
 

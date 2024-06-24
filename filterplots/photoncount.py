@@ -24,7 +24,7 @@ def photoncount(wavez, fluxz,obstime=1,specificfilter='U_UVOT'):
     #getting data from files
     for item in files:
         #Necessary to have "../" when running in /python/ directory
-        f = open("../" + item,'r')
+        f = open(item,'r')
 
 #	print(item)
         #seperating each filter's values so i can later apply them seperately
