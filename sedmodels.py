@@ -72,10 +72,10 @@ def kfun(wave,flux):
 #                    'SN2017erp_170702_uvopt_obswave_obsflux.dat',
 #                    'ASASSN14lp_visit3_hst.flm','Hsiao18_.dat',])
 
-mods = np.asarray(['ASASSN-14LP_peak_11fe_appended.dat','SN1992A_UV.dat','SN2011by_peak_11fe_appended.dat',
-	'SN2011fe_peak_11fe_appended.dat','SN2011iv_peak_11fe_appended.dat','SN2015F_peak_11fe_appended.dat',
-	'SN2016ccj_peak_11fe_appended.dat','SN2017erp_peak_11fe_appended.dat','SN2021fxy_peak_11fe_appended.dat',
-	'SN2022hrs_peak_11fe_appended.dat','SN2013dy_peak_11fe_appended.dat'])
+mods = np.asarray(['spectra/ASASSN-14LP_peak_11fe_appended.dat','spectra/SN1992A_UV.dat','spectra/SN2011by_peak_11fe_appended.dat',
+	'spectra/SN2011fe_peak_11fe_appended.dat','spectra/SN2011iv_peak_11fe_appended.dat','spectra/SN2015F_peak_11fe_appended.dat',
+	'spectra/SN2016ccj_peak_11fe_appended.dat','spectra/SN2017erp_peak_11fe_appended.dat','spectra/SN2021fxy_peak_11fe_appended.dat',
+	'spectra/SN2022hrs_peak_11fe_appended.dat','spectra/SN2013dy_peak_11fe_appended.dat'])
 
 def modgen(modl):
     
