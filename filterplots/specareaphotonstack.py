@@ -145,8 +145,8 @@ for filter in filterfiles:
     fig, axes = plt.subplots(3,1,figsize=setFigSizeInches('journal', subplots=(3,1)))                                                
     axes[0].plot(wavelength_spectra, flux_spectra)                    # Limit is 6000     
     #print(wavelength_spectra==wavelength_filters)                               
-    axes[0].set_xlabel('Wavelength [Angstroms]')
-    axes[0].set_ylabel('flux spectra [ergs/s/cm^2]')
+    axes[0].set_xlabel('Wavelength [$\AA$ngstroms]')
+    axes[0].set_ylabel('flux spectra [ergs/s/cm^2/$\AA$]')
     axes[0].set_xlim(1600,6000)
     axes[0].tick_params(direction="in")
     maxflux1 = np.nanmax(flux_spectra)
@@ -180,7 +180,7 @@ for filter in filterfiles:
     #print("Plot 2")
     #fig, axes = plt.subplots()                                                 
     axes[1].plot(wavelength_filters, area_filters, label=filternames[y])
-    axes[1].set_xlabel('Wavelength [Angstroms]')
+    axes[1].set_xlabel('Wavelength [$\AA$ngstroms]')
     axes[1].set_ylabel('Effective Area [cm]')
     axes[1].set_xlim(1600,6000)
     axes[1].tick_params(direction="in")
@@ -200,8 +200,8 @@ for filter in filterfiles:
     maxcounts1 = np.nanmax(counts_array[countsindex])
     
     axes[2].plot(wavelength_spectra, counts_array[countsindex]/maxcounts1,label=labellist[0])
-    axes[2].set_xlabel('Wavelength [Angstroms]')
-    axes[2].set_ylabel('Count Rate [photons/sec]')
+    axes[2].set_xlabel('Wavelength [$\AA$ngstroms]')
+    axes[2].set_ylabel('Count Rate [photons/sec/$\AA$]')
     axes[2].set_xlim(1600,6000)
     axes[2].tick_params(direction="in")
 
@@ -231,9 +231,8 @@ for filter in filterfiles:
 
 
     plt.legend()
-    plt.savefig(plotlabelname, bbox_inches='tight')
+    plt.savefig(plotlabelname, bbox_inches='tight', dpi=300)
     plt.show()
-
     y+=1
     x+=1
 plt.close('fig')
