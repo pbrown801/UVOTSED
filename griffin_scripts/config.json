@@ -1,0 +1,96 @@
+{
+    "input": {
+        "spectra_files": {
+            "path": "spectra",
+            "filenames": [
+                "SN1992A_UV.dat",
+                "SN2011by_peak_11fe_appended.dat"
+            ]
+        },
+        "filter_files": {
+            "path": "filters",
+            "filenames": [
+                "U_P08.txt",
+                "B_P08.txt",
+                "V_P08.txt",
+                "UVW2_B11.txt",
+                "UVM2_B11.txt",
+                "UVW1_B11.txt"
+            ]
+        }
+    },
+    "output": {
+        "output_dir": "griffin_scripts/results"
+    },
+    "model_parameters": {
+        "lb_values": {
+            "values": [
+                1.0,
+                1.5,
+                2.0
+            ],
+            "description": "Luminosity scaling factor.",
+            "units": ""
+        },
+        "rv_values": {
+            "start": 1.6,
+            "end": 3.1,
+            "steps": 2,
+            "description": "Total-to-selective extinction ratio.",
+            "units": "mag"
+        },
+        "av_values": {
+            "start": -0.5,
+            "end": 0.5,
+            "steps": 3,
+            "description": "Visual extinction.",
+            "units": "mag"
+        },
+        "z_values": {
+            "values": [
+                0.0,
+                0.01,
+                0.02
+            ],
+            "description": "Redshift values.",
+            "units": ""
+        },
+        "dmb_values": {
+            "start": 0.6,
+            "end": 2.2,
+            "steps": 17,
+            "description": "Light-curve decline rate parameter.",
+            "units": "mag"
+        },
+        "f11_values": {
+            "start": 0.8,
+            "end": 1.2,
+            "steps": 3,
+            "description": "Flux normalization factor.",
+            "units": ""
+        }
+    },
+    "experiments": [
+        {
+            "skip": [
+                "full_model"
+            ]
+        },
+        {
+            "name": "compare_and_remake",
+            "target_csv": "griffin_scripts/results/summary.csv",
+            "data_csv": "snbrown_output_20240426.csv"
+        },
+        {
+            "name": "full_model",
+            "parameter_grid": {
+                "lb": { "ref": "lb_values" },
+                "rv": { "ref": "rv_values" },
+                "av": { "ref": "av_values" },
+                "z": { "ref": "z_values" },
+                "dmb": { "ref": "dmb_values" },
+                "f11": { "ref": "f11_values" }
+            }
+        }
+    ]
+}
