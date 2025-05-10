@@ -1,3 +1,4 @@
 # List of files/directories to ignore when pushing to the repoisitory
 
 .venv
+griffin_scripts/results/bigsummary.csv
