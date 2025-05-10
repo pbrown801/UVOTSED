@@ -8,13 +8,13 @@ from utils import (
     kfun,
     get_experiment_param_grid,
     lazy_parameter_grid,
-    process_spectrum,
+    blanket_spectrum,
     apply_reddening,
     apply_redshift,
     get_filters
 )
 
-slambda_data = pd.read_csv('./spectra/uvmodel.data', sep='\\s+', comment='#')
+slambda_data = pd.read_csv('../spectra/uvmodel.data', sep='\\s+', comment='#')
 slambda_data.columns = ['wavelength', 'f_11', 'Slambda']
 slambda_wave = np.asarray(slambda_data.wavelength).astype(float)
 f_11 = np.asarray(slambda_data.f_11)
@@ -30,7 +30,7 @@ def full_model(config: dict, experiment_name: str = "full_model"):
     
     # Process spectra files.
     input_config = config.get("input", {})
-    spectra_files = input_config.get("spectra_files", [])
+    spectra_files = input_config.get("fewspectra_files", [])
     if isinstance(spectra_files, dict):
         base_path = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.abspath(os.path.join(base_path, ".."))
@@ -63,7 +63,7 @@ def full_model(config: dict, experiment_name: str = "full_model"):
             f11_param = params.get("f11")
         
         
-            wavelength, _, flux_modified = process_spectrum(spectrum_file, lb, uv_cutoff=4000, alpha=0.2)
+            wavelength, _, flux_modified = blanket_spectrum(spectrum_file, lb, uv_cutoff=4000, alpha=0.2)
             if wavelength is None:
                 continue
 

@@ -29,21 +29,23 @@ def main():
     # Validate configuration format (TODO: Add validation logic here)
 
     # Process the configuration for spectra and filter files
-    project_root = os.path.abspath(os.path.join(base_path, ".."))
-    spectra_files = config.get("input", {}).get("spectra_files")
+    project_root = os.path.abspath(os.path.join(base_path, ""))
+    spectra_files = config.get("input", {}).get("fewspectra_files")
     if isinstance(spectra_files, dict) and "path" in spectra_files and "filenames" in spectra_files:
         spectra_dir = os.path.join(project_root, spectra_files["path"])
         config["input"]["spectra_files"] = [os.path.join(spectra_dir, fname) for fname in spectra_files["filenames"]]
     
     filter_files = config.get("input", {}).get("filter_files")
     if isinstance(filter_files, dict) and "path" in filter_files and "filenames" in filter_files:
-        filter_dir = os.path.join(project_root, filter_files["path"])
+#        filter_dir = os.path.join(project_root, filter_files["path"])
+        filter_dir = filter_files["path"]
         config["input"]["filter_files"]["filenames"] = [os.path.join(filter_dir, fname) for fname in filter_files["filenames"]]
-
     # Set up model dictionary. The key should match the experiment's name.
     model_dict = {
         "full_model": full_model,
-        "compare_and_remake": compare_and_remake
+        "expanded_model": full_model,
+        "compare_and_remake": compare_and_remake,
+        "test_model": full_model
     }
 
     # Run the model experiments using the experiment name defined in each experiment block.

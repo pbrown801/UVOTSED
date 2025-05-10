@@ -110,13 +110,26 @@ def lazy_parameter_grid(param_dict):
     yield from recursive_grid(0, {})
 
 
-
-slambda_data = pd.read_csv('spectra/uvmodel.data', sep='\\s+', comment='#')
+'''
+slambda_data = pd.read_csv('../spectra/uvmodel.data', sep='\\s+', comment='#')
 slambda_data.columns = ['wavelength', 'f_11', 'Slambda']
 slambda_wave = np.asarray(slambda_data.wavelength).astype(float)
+print("when does the slambda in utils run?")
 f_11 = np.asarray(slambda_data.f_11)
 f_11_fun = interp1d(slambda_wave, f_11, kind='cubic')
 slambda_fun = interp1d(slambda_wave, slambda_data.Slambda, kind='cubic')
+'''
+
+
+def generate_spectrum(dmb: float, use_base: bool = False):
+    """Generate a spectrum with a given DMB."""
+    if use_base:
+        return f_11_fun(slambda_wave)
+
+    spectrum_flux = f_11_fun(slambda_wave) + slambda_fun(slambda_wave) * (dmb - 1.1)
+    return spectrum_flux
+
+
 
 def get_filters(path: str, filenames: list):
     path = os.path.abspath(path)
@@ -188,7 +201,7 @@ def kfun(wave, flux, filters, subtractor_key=None) -> dict:
 
 
 # Rename metallicity to line blanketing (lb)
-def process_spectrum(spectrum_file: str, lb: float, uv_cutoff: float = 4000, alpha: float = 0.2):
+def blanket_spectrum(spectrum_file: str, lb: float, uv_cutoff: float = 4000, alpha: float = 0.2):
     try:
         data = pd.read_csv(spectrum_file, sep='\\s+', comment='#', header=None)
     except Exception as ex:
@@ -221,15 +234,6 @@ def process_spectrum(spectrum_file: str, lb: float, uv_cutoff: float = 4000, alp
 
     return wavelength, flux_original, flux_modified
 
-
-
-def generate_spectrum(dmb: float, use_base: bool = False):
-    """Generate a spectrum with a given DMB."""
-    if use_base:
-        return f_11_fun(slambda_wave)
-
-    spectrum_flux = f_11_fun(slambda_wave) + slambda_fun(slambda_wave) * (dmb - 1.1)
-    return spectrum_flux
 
 
 

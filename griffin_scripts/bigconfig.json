@@ -25,7 +25,7 @@
             ]
         },
         "filter_files": {
-            "path": "../filters",
+            "path": "filters",
             "filenames": [
                 "U_P08.txt",
                 "B_P08.txt",
@@ -37,7 +37,7 @@
         }
     },
     "output": {
-        "output_dir": "results"
+        "output_dir": "griffin_scripts/results"
     },
     "model_parameters": {
         "lb_values": {
@@ -126,9 +126,13 @@
     "experiments": [
         {
             "skip": [
-                "full_model",
-                "expanded_model"
+                "full_model"
             ]
+        },
+        {
+            "name": "compare_and_remake",
+            "target_csv": "griffin_scripts/results/summary.csv",
+            "data_csv": "snbrown_output_20240426.csv"
         },
         {
             "name": "full_model",
@@ -151,22 +155,6 @@
                 "dmb": { "ref": "dmb_values" },
                 "f11": { "ref": "f11_values" }
             }
-        },
-        {
-            "name": "test_model",
-            "parameter_grid": {
-                "lb": { "ref": "lb_values" },
-                "rv": { "values": [3.1] },
-                "av": { "values": [0,0.1] },
-                "z": { "ref": "z_short" },
-                "dmb": { "values": [1] },
-                "f11": { "values": [1] }
-            }
-        },
-        {
-            "name": "compare_and_remake",
-            "target_csv": "results/summary.csv",
-            "data_csv": "../snbrown_output_20240426.csv"
         }
     ]
 }

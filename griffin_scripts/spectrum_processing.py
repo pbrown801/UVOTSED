@@ -7,39 +7,6 @@ import matplotlib.pyplot as plt
 
 from utils import apply_reddening, apply_redshift, get_filters, kfun
 
-def process_spectrum(spectrum_file: str, lb: float, uv_cutoff: float = 4000, alpha: float = 0.2):
-    try:
-        data = pd.read_csv(spectrum_file, sep='\\s+', comment='#', header=None)
-    except Exception as ex:
-        print(f"Error reading {spectrum_file}: {ex}")
-        return None, None, None
-
-    if data.shape[1] < 2:
-        print(f"File {spectrum_file} does not have enough columns.")
-        return None, None, None
-
-    if data.shape[1] == 2:
-        data.columns = ['wavelength', 'flux']
-    else:
-        data.columns = ['wavelength', 'flux', 'ferr']
-
-    data['wavelength'] = pd.to_numeric(data['wavelength'], errors='coerce')
-    data['flux'] = pd.to_numeric(data['flux'], errors='coerce')
-
-    data.dropna(subset=['wavelength', 'flux'], inplace=True)
-
-    wavelength = np.array(data['wavelength'], dtype=float)
-    flux = np.array(data['flux'], dtype=float)
-
-    flux_original = flux / np.max(flux)
-    flux_modified = flux_original.copy()
-
-    factor = max(1 - alpha * (lb - 1), 0.1)
-    uv_mask = wavelength < uv_cutoff
-    flux_modified[uv_mask] *= factor
-
-    return wavelength, flux_original, flux_modified
-
 
 
 def compute_color(m1, m2):
@@ -67,8 +34,6 @@ def filter_models_by_photometry(models_df, observed, errors):
 
     rows = []
     floor = 0.1
-
-
 
     # w1mv = []
     # bmv = []
@@ -158,7 +123,7 @@ def remake_spectrum(row, config):
     """{'input': {'spectra_files': ['/Users/griffinbeaudreau/Desktop/School/UVOTSED/spectra/SN1992A_UV.dat', '/Users/griffinbeaudreau/Desktop/School/UVOTSED/spectra/SN2011by_peak_11fe_appended.dat'], """
 
     # match basename to spectrum_file
-    files = config["input"]["spectra_files"]
+    files = config["input"]["fewspectra_files"]
     for file in files:
         if spectrum_basename in file:
             spectrum_file = file
@@ -207,7 +172,7 @@ def remake_spectrum(row, config):
         8. After, calcualte mean correction and standard deviation (final product of this project)
     """
 
-    wavelength, _, flux_modified = process_spectrum(spectrum_file, lb, uv_cutoff=4000, alpha=0.2)
+    wavelength, _, flux_modified = blanket_spectrum(spectrum_file, lb, uv_cutoff=4000, alpha=0.2)
     if wavelength is None:
         print(f"Failed to process spectrum: {spectrum_file}")
         return None
@@ -347,9 +312,9 @@ def compare_and_remake(config, experiment_name=None):
         bands = [band for _, band in phot_bands]
         for _, mod in tqdm(filtered.iterrows(), total=len(filtered), desc=f"Row {idx}"):
             spec_file = next(
-                f for f in config["input"]["spectra_files"]
+                f for f in config["input"]["fewspectra_files"]
                 if os.path.basename(f).startswith(mod["Spectrum"]))
-            wave, _, flux_mod = process_spectrum(spec_file, lb=mod["lb"])
+            wave, _, flux_mod = blanket_spectrum(spec_file, lb=mod["lb"])
             if wave is None:
                 continue
             synth1 = kfun(wave, flux_mod, filters)
