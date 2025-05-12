@@ -56,7 +56,14 @@
             "description": "Total-to-selective extinction ratio.",
             "units": "mag"
         },
-        "av_values": {
+        "av26_values": {
+            "start": -0.5,
+            "end": 0.5,
+            "steps": 11,
+            "description": "Visual extinction.",
+            "units": "mag"
+        },
+        "av31_values": {
             "start": -0.5,
             "end": 0.5,
             "steps": 11,
@@ -135,7 +142,8 @@
             "parameter_grid": {
                 "lb": { "ref": "lb_values" },
                 "rv": { "ref": "rv_values" },
-                "av": { "ref": "av_values" },
+                "av31": { "values": [0,0.1] },
+                "av26": { "values": [0,0.1] },
                 "z": { "ref": "z_short" },
                 "dmb": { "ref": "dmb_values" },
                 "f11": { "ref": "f11_values" }
@@ -146,7 +154,8 @@
             "parameter_grid": {
                 "lb": { "ref": "lb_values" },
                 "rv": { "ref": "rv_values" },
-                "av": { "ref": "av_values" },
+                "av31": { "values": [0,0.1] },
+                "av26": { "values": [0,0.1] },
                 "z": { "ref": "z_values" },
                 "dmb": { "ref": "dmb_values" },
                 "f11": { "ref": "f11_values" }
@@ -157,7 +166,8 @@
             "parameter_grid": {
                 "lb": { "ref": "lb_values" },
                 "rv": { "values": [3.1] },
-                "av": { "values": [0,0.1] },
+                "av31": { "values": [0,0.1] },
+                "av26": { "values": [0,0.1] },
                 "z": { "ref": "z_short" },
                 "dmb": { "values": [1] },
                 "f11": { "values": [1] }

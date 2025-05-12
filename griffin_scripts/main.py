@@ -66,9 +66,9 @@ def main():
         except KeyError:
             print(f"Model '{experiment_name}' not found in model dictionary.")
             continue
-        except Exception as e:
-            print(f"Error running model '{experiment_name}': {e}")
-            continue
+        #except Exception as e:
+         #   print(f"Error running model '{experiment_name}': {e}")
+          #  continue
 
 if __name__ == '__main__':
     main()

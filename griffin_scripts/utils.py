@@ -252,3 +252,29 @@ def apply_redshift(wavelength: np.ndarray, flux: np.ndarray, z: float):
     wavelength_observed = wavelength * (1 + z)
     flux_observed = flux / (1 + z)
     return wavelength_observed, flux_observed
+
+def apply_foleymodel(wavelength: np.ndarray, flux: np.ndarray, dmb: float):
+
+    uv_model = pd.read_csv('../spectra/uvmodel.data', sep='\\s+', comment='#')
+    uv_model.columns = ['wavelength', 'f_11', 'Slambda']
+    uv_model_wave = np.asarray(uv_model.wavelength).astype(float)
+    uv_model_flux = np.asarray(uv_model.f_11)
+    uv_model_dif  = np.asarray(uv_model.Slambda)
+
+
+    uv_model_wave=np.insert(uv_model_wave,0,1200, axis=None)
+    uv_model_wave=np.append(uv_model_wave,25000, axis=None)
+
+    uv_model_flux=np.insert(uv_model_flux,0,uv_model_flux[0], axis=None)
+    uv_model_flux=np.append(uv_model_flux,uv_model_flux[len(uv_model_flux)-1], axis=None)
+
+    uv_model_dif=np.insert(uv_model_dif,0,uv_model_dif[0], axis=None)
+    uv_model_dif=np.append(uv_model_dif,uv_model_dif[len(uv_model_dif)-1], axis=None)
+
+
+    f_11_fun = interp1d(uv_model_wave,uv_model_flux, kind='cubic')
+    slambda_fun = interp1d(uv_model_wave, uv_model_dif, kind='cubic')
+
+
+    foleyflux=flux+(flux/f_11_fun(wavelength))*slambda_fun(wavelength)
+    return foleyflux

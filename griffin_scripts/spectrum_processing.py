@@ -5,7 +5,7 @@ from scipy.interpolate import interp1d
 from pyphot import Filter
 import matplotlib.pyplot as plt
 
-from utils import apply_reddening, apply_redshift, get_filters, kfun
+from utils import apply_reddening, apply_redshift, get_filters, kfun, apply_foleymodel
 
 
 
@@ -115,79 +115,6 @@ def filter_models_by_photometry(models_df, observed, errors):
             ]
         }
     },"""
-def remake_spectrum(row, config):
-    spectrum_basename = row["Spectrum"]
-    # spectrum_basename: SN1992A_UV (example)
-
-    # config:
-    """{'input': {'spectra_files': ['/Users/griffinbeaudreau/Desktop/School/UVOTSED/spectra/SN1992A_UV.dat', '/Users/griffinbeaudreau/Desktop/School/UVOTSED/spectra/SN2011by_peak_11fe_appended.dat'], """
-
-    # match basename to spectrum_file
-    files = config["input"]["fewspectra_files"]
-    for file in files:
-        if spectrum_basename in file:
-            spectrum_file = file
-            break
-    else:
-        print(f"File not found for spectrum: {spectrum_basename}")
-        return None
-    
-    # print(f"Found spectrum file: {spectrum_file}")
-
-
-    lb = row["lb"]
-    rv = row["rv"]
-    av = row["av16"] if rv == 1.6 else row["av31"]
-    redshift = row["redshift"]
-    dmb = row["dmb"]
-    f11 = row["f11"]
-
-    # U,B,V,UVW2,UVM2,UVW1
-    magnitudes = {
-        "U": row["U"],
-        "B": row["B"],
-        "V": row["V"],
-        "UVW2": row["UVW2"],
-        "UVM2": row["UVM2"],
-        "UVW1": row["UVW1"]
-    }
-
-    # print(f"Processing spectrum: {spectrum_file}")
-
-    """SN2011by_peak_11fe_appended,2.0,3.1,,0.5,0.0,1.8,0.8,-19.728388,-19.60335,-19.805873,-16.472109,-15.396212,-18.16598
-
-    
-        This done by next week, and then next monday work on trasferring it                                     !!
-        Then have a week where I'm playing with it (test using command line, make sure python versions match)   !!
-        One page write up summarizing what I did and email peter                                                !!
-
-
-        1. From row, take magnitudes
-        2. De-redden (apply the reddening function using the MW_ebv with a negative sign)
-        3. Divide wavelength by (1+redshift (the redshift specified in the experiemnt config))
-        4. Multiply the flux by (1 + redshift)
-        5. Apply reddening function with negative host_ebv (host galaxy redenning)
-        6. Calculate magnitudes then subtract from row to get correction factor
-        7. Instead of saving, add row of these corrections to a list (don't need to save as csv files yay) (use current files and plot wavelength, flux/flux@wave=6000)
-        8. After, calcualte mean correction and standard deviation (final product of this project)
-    """
-
-    wavelength, _, flux_modified = blanket_spectrum(spectrum_file, lb, uv_cutoff=4000, alpha=0.2)
-    if wavelength is None:
-        print(f"Failed to process spectrum: {spectrum_file}")
-        return None
-    
-    sort_idx = np.argsort(wavelength)
-    wavelength = wavelength[sort_idx]
-    flux_modified = flux_modified[sort_idx]
-
-    reddened_flux = apply_reddening(wavelength, flux_modified, av, rv)
-    wave_redshifted, flux_redshifted = apply_redshift(wavelength, reddened_flux, redshift)
-    final_flux = flux_redshifted * f11 * (dmb / 1.1)
-
-    return wavelength, final_flux
-
-
 
 
 
