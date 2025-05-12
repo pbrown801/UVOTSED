@@ -121,13 +121,13 @@ slambda_fun = interp1d(slambda_wave, slambda_data.Slambda, kind='cubic')
 '''
 
 
-def generate_spectrum(dmb: float, use_base: bool = False):
-    """Generate a spectrum with a given DMB."""
-    if use_base:
-        return f_11_fun(slambda_wave)
-
-    spectrum_flux = f_11_fun(slambda_wave) + slambda_fun(slambda_wave) * (dmb - 1.1)
-    return spectrum_flux
+#def generate_spectrum(dmb: float, use_base: bool = False):
+#    """Generate a spectrum with a given DMB."""
+#    if use_base:
+#        return f_11_fun(slambda_wave)
+#
+#    spectrum_flux = f_11_fun(slambda_wave) + slambda_fun(slambda_wave) * (dmb - 1.1)
+#    return spectrum_flux
 
 
 

@@ -50,9 +50,9 @@
             "units": ""
         },
         "rv_values": {
-            "start": 1.6,
+            "start": 2.6,
             "end": 3.1,
-            "steps": 3,
+            "steps": 2,
             "description": "Total-to-selective extinction ratio.",
             "units": "mag"
         },

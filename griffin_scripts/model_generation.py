@@ -14,15 +14,30 @@ from utils import (
     get_filters
 )
 
-slambda_data = pd.read_csv('../spectra/uvmodel.data', sep='\\s+', comment='#')
-slambda_data.columns = ['wavelength', 'f_11', 'Slambda']
-slambda_wave = np.asarray(slambda_data.wavelength).astype(float)
-f_11 = np.asarray(slambda_data.f_11)
-f_11_fun = interp1d(slambda_wave, f_11, kind='cubic')
-slambda_fun = interp1d(slambda_wave, slambda_data.Slambda, kind='cubic')
+uv_model = pd.read_csv('../spectra/uvmodel.data', sep='\\s+', comment='#')
+uv_model.columns = ['wavelength', 'f_11', 'Slambda']
+uv_model_wave = np.asarray(uv_model.wavelength).astype(float)
+uv_model_flux = np.asarray(uv_model.f_11)
+uv_model_dif  = np.asarray(uv_model.Slambda)
 
-def generate_spectrum(dmb, f11_scale=1.0):
-    return f11_scale * f_11_fun(slambda_wave) + slambda_fun(slambda_wave) * (dmb - 1.1)
+
+uv_model_wave=np.insert(uv_model_wave,0,1400, axis=None)
+uv_model_wave=np.append(uv_model_wave,8000, axis=None)
+
+uv_model_flux=np.insert(uv_model_flux,0,uv_model_flux[0], axis=None)
+uv_model_flux=np.append(uv_model_flux,uv_model_flux[len(uv_model_flux)-1], axis=None)
+
+uv_model_dif=np.insert(uv_model_dif,0,uv_model_dif[0], axis=None)
+uv_model_dif=np.append(uv_model_dif,uv_model_dif[len(uv_model_dif)-1], axis=None)
+
+
+f_11_fun = interp1d(uv_model_wave,uv_model_flux, kind='cubic')
+slambda_fun = interp1d(uv_model_wave, uv_model_dif, kind='cubic')
+
+#def generate_spectrum(dmb, f11_scale=1.0):
+#    return f11_scale * f_11_fun(slambda_wave) + slambda_fun(slambda_wave) * (dmb - 1.1)
+#def generate_f11spectrum(dmb, spec_wave, spec_flux):
+#    return f11_scale * f_11_fun(spec_wave) + slambda_fun(spec_wave) * (dmb - 1.1)
 
 def full_model(config: dict, experiment_name: str = "full_model"):
     # Get parameter grid configuration for the experiment.
